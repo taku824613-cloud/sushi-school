@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>よくある質問（FAQ）｜東京寿司匠アカデミー</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="東京寿司匠アカデミーへの入学・費用・授業・卒業後に関するよくある質問をまとめました。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#faf7f2;--sf:#f0ebe0;--card:#ffffff;--card2:#f5f0e8;--gold:#8c6d2e;--gold2:#6a5020;--golds:rgba(140,109,46,.08);--text:#0a0704;--muted:#1c1610;--bdr:rgba(26,21,16,.1);--bdrh:rgba(140,109,46,.32);--line:#06C755;--ff:"Inter","Noto Sans JP",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--maxw:1160px;--moss:#4e6e3a;--moss2:#3a5228;--mosss:rgba(78,110,58,.08);--mossbdr:rgba(78,110,58,.3)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--ff);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    section{padding:72px 0}
+
+    /* HEADER */
+    .hdr{position:sticky;top:0;z-index:200;background:rgba(250,247,242,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+    .hdr-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo-e{font-size:.8rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+    .logo-j{font-size:.62rem;letter-spacing:.16em;color:var(--muted);font-weight:400;margin-top:1px}
+    .nav{display:flex;align-items:center;gap:24px}
+    .nav-l{display:flex;align-items:center;gap:22px}
+    .nav-l a{font-size:.85rem;font-weight:700;letter-spacing:.06em;color:var(--text);transition:color 160ms;white-space:nowrap}
+    .nav-l a:hover,.nav-l a.on{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.12em;cursor:pointer;transition:all 200ms var(--ease);white-space:nowrap;border:none;font-family:var(--ff);text-transform:uppercase}
+    .bg{border:1px solid var(--gold);background:var(--gold);color:#fff}.bg:hover{background:#a07e38;box-shadow:0 8px 28px rgba(140,109,46,.3);transform:translateY(-1px)}
+    .bo{border:1px solid var(--bdrh);background:transparent;color:var(--gold)}.bo:hover{background:var(--golds)}
+    .bl{border:1px solid var(--line);background:var(--line);color:#fff;text-transform:none;letter-spacing:.04em}.bl:hover{background:#05a847;transform:translateY(-1px)}
+    .hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    .hbg span{display:block;width:22px;height:1px;background:var(--text);transition:all 160ms}
+    .nopen .hbg span:nth-child(1){transform:translateY(6px) rotate(45deg)}.nopen .hbg span:nth-child(2){opacity:0}.nopen .hbg span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    @media(max-width:820px){.hbg{display:flex}.nav{position:fixed;inset:68px 0 auto 0;background:rgba(250,247,242,.98);border-bottom:1px solid var(--bdr);padding:24px;flex-direction:column;align-items:flex-start;gap:20px;transform:translateY(-110%);opacity:0;pointer-events:none;transition:all 280ms var(--ease)}.nopen .nav{transform:translateY(0);opacity:1;pointer-events:auto}.nav-l{flex-direction:column;align-items:flex-start;gap:18px}.nav .btn{width:100%;justify-content:center}}
+
+    /* PAGE HERO */
+    .phero{padding:72px 0 64px;background:linear-gradient(160deg,var(--sf) 0%,var(--card2) 100%);border-bottom:1px solid var(--bdr)}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+    .breadcrumb a{color:var(--muted);transition:color 160ms}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{color:var(--bdrh)}
+    .phero h1{font-family:'Playfair Display','Shippori Mincho',Georgia,serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:.02em;margin-bottom:16px}
+    .phero p{font-family:'Shippori Mincho',serif;font-size:1.05rem;color:var(--muted);max-width:560px;line-height:2.1;font-weight:500}
+
+    /* SECTION HEADING */
+    .lbl{font-size:.63rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+    .lbl::before{content:"";display:block;width:20px;height:1px;background:var(--gold2)}
+    h2{font-family:"Noto Sans JP",var(--ff);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin-bottom:12px}
+    .stxt{font-family:'Shippori Mincho',serif;font-size:.97rem;color:var(--muted);max-width:36rem;line-height:2.1;font-weight:500}
+
+    /* FAQ LAYOUT */
+    .faq-sec{background:var(--bg)}
+    .faq-layout{display:grid;grid-template-columns:190px 1fr;gap:40px;align-items:flex-start;margin-top:40px}
+    .faq-nav{position:sticky;top:88px;display:flex;flex-direction:column;gap:2px}
+    .faq-nav-label{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);padding:0 10px;margin-bottom:8px;font-weight:700}
+    /* LEFT: serif font for nav buttons — contrast with right-side sans */
+    .faq-nav-btn{background:none;border:none;cursor:pointer;font-family:'Shippori Mincho',serif;font-size:.88rem;font-weight:600;letter-spacing:.04em;color:var(--muted);padding:10px 12px;border-radius:8px;text-align:left;transition:all 160ms;border-left:2px solid transparent;line-height:1.5}
+    .faq-nav-btn:hover{color:var(--text);background:var(--golds);border-left-color:var(--bdrh)}
+    .faq-nav-btn.active{color:var(--gold2);background:var(--golds);border-left-color:var(--gold2);font-weight:700}
+    @media(max-width:760px){.faq-layout{grid-template-columns:1fr}.faq-nav{position:static;flex-direction:row;flex-wrap:wrap;gap:6px;margin-bottom:16px}.faq-nav-label{display:none}.faq-nav-btn{border-left:none;border-bottom:2px solid transparent;border-radius:6px;padding:7px 14px;font-size:.76rem}}
+    @media(max-width:760px){.faq-nav-btn.active{border-bottom-color:var(--gold)}}
+
+    /* FAQ CATEGORY */
+    .faq-cat{display:none;flex-direction:column;gap:8px}
+    .faq-cat.active{display:flex}
+    .faq-cat-title{font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-bottom:2px;padding-left:2px;display:flex;align-items:center;gap:8px}
+    .faq-cat-title::before{content:"";display:block;width:16px;height:1px;background:var(--gold2)}
+
+    /* FAQ ITEM */
+    .faq-item{border-radius:10px;border:1px solid var(--bdr);background:var(--card);overflow:hidden;transition:border-color 200ms,box-shadow 200ms}
+    .faq-item:hover{border-color:var(--bdrh)}
+    .faq-item.open{border-color:var(--bdrh);box-shadow:0 4px 20px rgba(140,109,46,.08)}
+    /* RIGHT: heavy sans for Q text (Image #29 style) */
+    .faq-q{width:100%;display:flex;align-items:center;gap:14px;padding:18px 20px;background:none;border:none;cursor:pointer;font-family:"Noto Sans JP",var(--ff);font-size:1rem;font-weight:800;color:var(--text);text-align:left;transition:background 160ms;line-height:1.6;letter-spacing:-.01em}
+    .faq-q:hover{background:var(--golds)}
+    .faq-q-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1px solid var(--bdrh);background:var(--golds);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gold);transition:transform 280ms var(--ease),background 160ms}
+    .faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--gold);color:#fff;border-color:var(--gold)}
+    /* Answer text: Shippori Mincho (serif), softer weight — contrasts with bold sans question */
+    .faq-a{display:none;padding:14px 20px 20px 52px;font-family:'Shippori Mincho',serif;font-size:.96rem;color:var(--muted);line-height:2.3;font-weight:500;border-top:1px solid var(--bdr)}
+    .faq-item.open .faq-a{display:block}
+
+    /* STILL UNSURE */
+    .unsure-sec{background:var(--sf)}
+    .unsure-box{border-radius:20px;border:1px solid var(--bdrh);background:linear-gradient(145deg,var(--card2),var(--card));padding:40px 32px;text-align:center;max-width:640px;margin:0 auto}
+    .unsure-box h2{font-family:'Shippori Mincho',serif;font-size:clamp(1.4rem,2.8vw,1.8rem);color:var(--gold2);margin-bottom:14px;font-weight:700}
+    .unsure-box p{font-family:'Shippori Mincho',serif;font-size:.96rem;color:var(--muted);line-height:2.1;margin-bottom:24px;max-width:440px;margin-left:auto;margin-right:auto;font-weight:500}
+    .unsure-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:14px}
+    .unsure-btns .btn{padding:13px 26px;font-size:.82rem}
+    .unsure-note{font-size:.74rem;color:var(--muted)}
+
+    /* PAGE NAV */
+    .page-nav{background:var(--bg);padding:48px 0}
+    .pnav-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .pnav-card{border-radius:16px;border:1px solid var(--bdrh);background:linear-gradient(135deg,var(--card2),var(--card));padding:24px 28px;display:flex;align-items:center;gap:16px;transition:all 280ms var(--ease);color:inherit}
+    .pnav-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+    .pnav-card.next{justify-content:flex-end;text-align:right}
+    .pnav-arrow{font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:transform 280ms var(--ease)}
+    .pnav-card.prev:hover .pnav-arrow{transform:translateX(-5px)}
+    .pnav-card.next:hover .pnav-arrow{transform:translateX(5px)}
+    .pnav-lbl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+    .pnav-title{font-size:.92rem;font-weight:600}
+    @media(max-width:600px){.pnav-grid{grid-template-columns:1fr}}
+
+    /* FOOTER */
+    .ftr{padding:32px 0 40px;border-top:1px solid var(--bdr);background:var(--bg)}
+    .ftr-in{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .fcopy{font-size:.74rem;color:var(--muted)}
+    .flinks{display:flex;align-items:center;gap:18px}
+    .flinks a{font-size:.74rem;color:var(--muted);transition:color 160ms}.flinks a:hover{color:var(--gold)}
+    .fdiv{width:1px;height:12px;background:var(--bdr)}
+    @media(max-width:560px){.ftr-in{flex-direction:column;align-items:flex-start;gap:12px}}
+
+    /* STICKY BAR */
+    .stkbar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(250,247,242,.97);backdrop-filter:blur(20px);border-top:1px solid var(--bdr);padding:12px 20px;display:none;gap:10px}
+    .stkbar .btn{flex:1;justify-content:center;padding:13px 16px;font-size:.8rem}
+    @media(max-width:760px){.stkbar{display:flex};body{padding-bottom:70px}}
+
+    /* EMPHASIS */
+    strong{font-weight:700;color:var(--text)}
+    .faq-a strong{color:var(--gold2)}
+    .stxt strong{color:var(--gold2);font-weight:700}
+
+    /* FADE UP */
+    .fu{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+    .fu.on{opacity:1;transform:translateY(0)}
+
+    /* ===== READABILITY BOOST (Image #29 — heavy sans) ===== */
+    body{font-weight:500}
+    h2,h3{font-family:"Noto Sans JP",var(--ff)!important;font-weight:900!important;letter-spacing:-.03em!important}
+    .stxt,.faq-a,.phero p{font-weight:600!important;color:var(--text)!important}
+    .faq-q{font-family:"Noto Sans JP",var(--ff)!important;font-weight:800!important;font-size:1rem!important;letter-spacing:-.01em!important}
+    .unsure-box p,.fcopy,.flinks a{font-weight:600;color:var(--muted)!important}
+    .lbl,.faq-cat-title{font-weight:700!important;opacity:.9!important}
+    p,li{font-weight:500}
+
+    /* ===== EXTRA ANIMATIONS ===== */
+    @keyframes h2wipe{0%{clip-path:inset(0 100% 0 0);opacity:.6;letter-spacing:.12em}50%{letter-spacing:.06em}100%{clip-path:inset(0 0% 0 0);opacity:1;letter-spacing:.06em}}
+    .fu.on h2{animation:h2wipe .75s cubic-bezier(.22,1,.36,1) forwards}
+
+    /* FAQ item entry stagger */
+    @keyframes faqslide{0%{opacity:0;transform:translateX(-12px)}100%{opacity:1;transform:translateX(0)}}
+    .faq-item.fu.on{animation:faqslide .5s cubic-bezier(.22,1,.36,1) forwards}
+
+    /* Question reveal border flash */
+    @keyframes qborderflash{0%{border-color:var(--bdrh)}50%{border-color:rgba(140,109,46,.6);box-shadow:0 0 0 3px rgba(140,109,46,.08)}100%{border-color:var(--bdrh)}}
+    .faq-item.fu.on{animation:qborderflash .8s ease .3s both, faqslide .5s cubic-bezier(.22,1,.36,1) forwards}
+
+    /* ===== NEAR-FUTURE ACCENTS ===== */
+    @keyframes lbldraw{0%{width:0;opacity:.4}100%{width:20px;opacity:1}}
+    .fu.on .lbl::before{animation:lbldraw .5s ease .15s both}
+
+    /* FAQ heading number highlight */
+    .faq-q{position:relative}
+    @keyframes qnumglow{0%,100%{color:var(--gold)}40%{color:#b89040;text-shadow:0 0 10px rgba(140,109,46,.4)}100%{color:var(--gold)}}
+    .faq-item.fu.on .faq-q-icon{animation:qnumglow .7s ease .2s both}
+
+    /* CTA urgency badge */
+    .urgency-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(210,60,20,.07);border:1px solid rgba(210,70,20,.22);border-radius:999px;padding:5px 13px;font-size:.67rem;font-weight:700;color:#c84820;letter-spacing:.08em;margin-bottom:12px}
+    .urgency-badge::before{content:"●";font-size:.4rem;animation:urpulse 1.1s ease-in-out infinite}
+    @keyframes urpulse{0%,100%{opacity:1}50%{opacity:.2}}
+
+    /* ===== SUSHI IMAGERY ===== */
+    .sushi-strip{overflow:hidden;border-top:1px solid var(--bdr);line-height:0}
+    .sushi-strip-inner{display:flex;height:210px}
+    .sushi-tile{flex:1;background-size:cover;background-position:center;filter:brightness(.78) contrast(1.08);transition:flex .7s cubic-bezier(.22,1,.36,1),filter .4s}
+    .sushi-tile:hover{flex:2.6;filter:brightness(.9) contrast(1.1)}
+    @media(max-width:640px){.sushi-strip-inner{height:140px}}
+
+    .sushi-banner-sec{position:relative;height:300px;overflow:hidden;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+    .sushi-banner-sec img{width:100%;height:100%;object-fit:cover;filter:brightness(.52) contrast(1.1) saturate(.88)}
+    .sushi-banner-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;background:linear-gradient(135deg,rgba(6,5,4,.58) 0%,rgba(6,5,4,.22) 50%,rgba(6,5,4,.58) 100%)}
+    .sushi-banner-text{font-family:'Shippori Mincho',serif;font-size:clamp(1.05rem,2.2vw,1.52rem);color:rgba(255,255,255,.92);letter-spacing:.18em;font-weight:600;text-align:center;line-height:2}
+    .sushi-banner-sub{font-size:.67rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    @media(max-width:600px){.sushi-banner-sec{height:200px}}
+  </style>
+</head>
+<body>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr-in">
+    <a href="index.html"><div class="logo-e">Tokyo Sushi Academy</div><div class="logo-j">東京寿司匠アカデミー</div></a>
+    <button class="hbg" aria-label="メニュー"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <div class="nav-l">
+        <a href="index.html">トップ</a>
+        <a href="detail.html">コース詳細</a>
+        <a href="faq.html" class="on">よくある質問</a>
+        <a href="instructors.html">講師紹介</a>
+        <a href="hiring.html">企業採用のご相談</a>
+      </div>
+      <a href="detail.html#contact" class="btn bg" data-track="header-cta">無料説明会 →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="phero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Top</a><span>›</span><a href="detail.html">コース詳細</a><span>›</span><span style="color:var(--gold)">FAQ</span></div>
+      <h1>よくある質問</h1>
+      <p>入学・費用・授業内容・卒業後のキャリアについて、よく寄せられる質問をまとめました。</p>
+    </div>
+  </div>
+
+  <!-- SUSHI VISUAL STRIP -->
+  <div class="sushi-strip" aria-hidden="true">
+    <div class="sushi-strip-inner">
+      <div class="sushi-tile" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sushi_Sashimi_Medium_Platter_-_Yama-ya_%282570349350%29.jpg/1280px-Sushi_Sashimi_Medium_Platter_-_Yama-ya_%282570349350%29.jpg')"></div>
+      <div class="sushi-tile" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tuna_nigiri_sushi_-_Sushiko_%282648979899%29.jpg/1280px-Tuna_nigiri_sushi_-_Sushiko_%282648979899%29.jpg')"></div>
+      <div class="sushi-tile" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Japanese_Sushi_platter.jpg/1280px-Japanese_Sushi_platter.jpg')"></div>
+      <div class="sushi-tile" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Salmon_Sushi_%283332910936%29.jpg/1280px-Salmon_Sushi_%283332910936%29.jpg')"></div>
+      <div class="sushi-tile" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Sushi_Sashimi_Platter_-_Suzuran_%284004748280%29.jpg/1280px-Sushi_Sashimi_Platter_-_Suzuran_%284004748280%29.jpg')"></div>
+    </div>
+  </div>
+
+  <section class="faq-sec">
+    <div class="wrap">
+      <div class="fu">
+        <div class="lbl">FAQ</div>
+        <h2>よくある質問</h2>
+        <p class="stxt">解決しない場合は<strong>LINE</strong>からお気軽にご相談ください。</p>
+      </div>
+
+      <div class="faq-layout">
+        <!-- CATEGORY NAV -->
+        <nav class="faq-nav" aria-label="カテゴリ">
+          <div class="faq-nav-label">カテゴリ</div>
+          <button class="faq-nav-btn active" onclick="showCat('entry')">入学について</button>
+          <button class="faq-nav-btn" onclick="showCat('cost')">費用について</button>
+          <button class="faq-nav-btn" onclick="showCat('lesson')">授業について</button>
+          <button class="faq-nav-btn" onclick="showCat('career')">卒業後について</button>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--bdr)">
+            <div class="faq-nav-label">企業の方</div>
+            <a href="hiring.html" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:8px;background:var(--sumi);border:1.5px solid var(--sumi);color:#fff;font-family:'Noto Sans JP',var(--ff);font-size:.82rem;font-weight:800;letter-spacing:-.01em;transition:all 200ms;line-height:1.4" onmouseover="this.style.background='#3e3020';this.style.borderColor='#3e3020'" onmouseout="this.style.background='var(--sumi)';this.style.borderColor='var(--sumi)'">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.85"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              人材が欲しい企業様へ
+            </a>
+            <a href="faq.html#cat-intl" onclick="showCat('intl');return false;" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;background:none;border:1px solid var(--bdr);color:var(--muted);font-family:'Shippori Mincho',serif;font-size:.84rem;font-weight:600;letter-spacing:.02em;transition:all 160ms;margin-top:6px" onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--bdrh)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--bdr)'">外国人の方へ</a>
+          </div>
+        </nav>
+
+        <div>
+          <!-- 入学 -->
+          <div class="faq-cat active" id="cat-entry">
+            <div class="faq-cat-title">入学について</div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>全くの未経験でも入学できますか？</span></button><div class="faq-a">はい。入学者の<strong>約80%がまったくの未経験</strong>からスタートしています。包丁の使い方から丁寧に指導しますので、ご安心ください。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>年齢制限や、仕事をしながら通えますか？</span></button><div class="faq-a">年齢制限はありません。<strong>10代〜50代以上</strong>まで在籍しています。<strong>平日夜コース（18:30〜21:30）</strong>と<strong>週末コース（土日）</strong>もご用意しているため、現職を続けながら通う方が多くいます。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>無料説明会では何を話しますか？</span></button><div class="faq-a">コース詳細・受講料・スケジュール・就職サポートをご説明します。個別のご相談（目標・経歴・ビザ等）も歓迎です。オンライン参加も可能です。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>定員はありますか？</span></button><div class="faq-a">各コースに定員があります。特に平日夜・週末コースは人気のため、ご検討中の方はお早めにご連絡ください。</div></div>
+          </div>
+
+          <!-- 費用 -->
+          <div class="faq-cat" id="cat-cost">
+            <div class="faq-cat-title">費用について</div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>受講料のほかに費用はかかりますか？</span></button><div class="faq-a">受講料に教材費・食材費が含まれます。別途かかるのは通学交通費のみです。道具（包丁・前掛けなど）は当アカデミーが貸し出しますが、購入を希望される方向けに優待でご案内することも可能です。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>分割払いはできますか？</span></button><div class="faq-a">はい。月々のお支払いプランや、教育ローンのご相談にも対応しています。詳細は無料説明会にてご案内します。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>途中でやめた場合、返金はありますか？</span></button><div class="faq-a">特定商取引法に基づき、入学から一定期間内であればクーリングオフが可能です。詳細は入学時にお渡しする書類をご確認いただくか、説明会でお尋ねください。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>給付金・補助金は使えますか？</span></button><div class="faq-a">現時点では対象外ですが、今後対応できるよう準備中です。最新情報は説明会にてご確認ください。</div></div>
+          </div>
+
+          <!-- 授業 -->
+          <div class="faq-cat" id="cat-lesson">
+            <div class="faq-cat-title">授業について</div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>1クラスの人数はどれくらいですか？</span></button><div class="faq-a"><strong>少人数制（1クラス最大8名）</strong>を採用しており、講師がしっかりと<strong>一人ひとりの手を見て指導</strong>できる環境を整えています。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>欠席した場合の補講はありますか？</span></button><div class="faq-a">はい。欠席した場合は振替授業を利用できます。事前にご連絡いただければ、別日程での受講を調整します。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>授業は日本語のみですか？</span></button><div class="faq-a">日本語・英語どちらにも対応しています。外国人講師（サラ・タン）が英語での指導を担当しますので、日本語に不安がある方もご安心ください。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>実習で使う食材は毎回新鮮なものを使いますか？</span></button><div class="faq-a">はい。毎回プロの現場と同じ鮮魚を使って実習します。食材の選び方・仕入れの目利きも授業の一部です。</div></div>
+          </div>
+
+          <!-- 卒業後 -->
+          <div class="faq-cat" id="cat-career">
+            <div class="faq-cat-title">卒業後について</div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>就職先の紹介はしてもらえますか？</span></button><div class="faq-a">はい。<strong>国内外の寿司店・和食店ネットワーク</strong>を構築し、修了生向けの求人情報をご案内できるよう積極的に取り組んでいます。<strong>実技試験対策・面接準備</strong>もサポートします。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>就職率はどのくらいですか？</span></button><div class="faq-a">開校準備中のため現時点での実績数値はございませんが、修了後の就職・開業を目指す方を全力でサポートする体制を整えています。個別の就職相談も随時承ります。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>独立開業のサポートはありますか？</span></button><div class="faq-a">プロフェッショナルコースでは店舗運営・独立準備モジュールを設けており、物件選び・メニュー設計・原価管理・資金計画まで相談に乗ります。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>卒業後もサポートは続きますか？</span></button><div class="faq-a">卒業後も定期的な情報共有や個別相談に対応しています。OB・OGのコミュニティがあり、先輩職人と繋がれる機会もご提供しています。</div></div>
+          </div>
+
+          <!-- 外国人 -->
+          <div class="faq-cat" id="cat-intl">
+            <div class="faq-cat-title">外国人の方へ</div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>日本語が話せなくても受講できますか？</span></button><div class="faq-a"><strong>英語での受講が可能</strong>です。英語担当講師のサラ・タンが<strong>全授業に対応</strong>します。受講後の就職活動でも英語でサポートします。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>ビザについて相談できますか？</span></button><div class="faq-a">はい。留学ビザ・技能ビザ・特定技能ビザ等のご相談を受け付けています。提携している行政書士事務所もご紹介できますので、お気軽にお問い合わせください。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>卒業後に海外で働く場合のサポートはありますか？</span></button><div class="faq-a">はい。北米・ヨーロッパ・アジアの寿司レストランとの提携を進めており、修了後の海外就職をご支援できる体制を整えています。英語での履歴書作成・面接対策も専門スタッフがサポートします。</div></div>
+            <div class="faq-item fu"><button class="faq-q" onclick="toggle(this)"><span class="faq-q-icon">+</span><span>入学説明会はオンラインで受けられますか？</span></button><div class="faq-a">はい。Zoomによるオンライン説明会を実施しています。時差がある国からのご参加も歓迎です。お申し込み時にオンライン希望とお知らせください。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSHI BANNER -->
+  <div class="sushi-banner-sec" aria-hidden="true">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Various_sushi%2C_beautiful_October_night_at_midnight.jpg/1280px-Various_sushi%2C_beautiful_October_night_at_midnight.jpg" alt="" loading="lazy" />
+    <div class="sushi-banner-overlay">
+      <div class="sushi-banner-sub">Tokyo Sushi Academy</div>
+      <div class="sushi-banner-text">疑問が解決したら、<br />まず話を聞いてみましょう。</div>
+    </div>
+  </div>
+
+  <!-- STILL UNSURE -->
+  <section class="unsure-sec">
+    <div class="wrap">
+      <div class="unsure-box fu">
+        <h2>まだ迷っていますか？</h2>
+        <p>疑問や不安はLINEで気軽にご相談ください。入校を強制することは一切ありません。まずは話を聞いてみるところから始めましょう。</p>
+        <div class="unsure-btns">
+          <a href="https://lin.ee/XXXXXXX" class="btn bl" data-track="faq-line" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 4C11.2 4 4 10.1 4 17.6c0 6.7 5.9 12.3 13.9 13.4l.9.1v4.4l4.1-4c.3-.3.8-.4 1.2-.3C32.1 29.9 36 24.1 36 17.6 36 10.1 28.8 4 20 4z"/></svg>
+            LINEで相談する（無料）
+          </a>
+          <a href="detail.html#contact" class="btn bg" data-track="faq-seminar">無料説明会に申し込む →</a>
+        </div>
+        <p class="unsure-note"><strong>返信は24時間以内</strong> ・ 秘密厳守</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE NAV -->
+  <div class="page-nav">
+    <div class="wrap">
+      <div class="pnav-grid">
+        <a href="detail.html" class="pnav-card prev fu" data-track="prev-detail">
+          <div class="pnav-arrow">←</div>
+          <div><div class="pnav-lbl">前のページ</div><div class="pnav-title">コース詳細・料金</div></div>
+        </a>
+        <a href="instructors.html" class="pnav-card next fu" data-track="next-instructors">
+          <div><div class="pnav-lbl">次のページ</div><div class="pnav-title">講師紹介</div></div>
+          <div class="pnav-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="fcopy">&copy; <span id="yr"></span> Tokyo Sushi Academy. All rights reserved.</div>
+    <div class="flinks">
+      <a href="index.html">トップ</a><div class="fdiv"></div>
+      <a href="detail.html">コース詳細</a><div class="fdiv"></div>
+      <a href="faq.html">FAQ</a><div class="fdiv"></div>
+      <a href="instructors.html">講師紹介</a><div class="fdiv"></div>
+      <a href="hiring.html">企業採用</a>
+    </div>
+  </div>
+</footer>
+
+<div class="stkbar" id="stk">
+  <a href="detail.html#contact" class="btn bg" data-track="sticky-seminar">説明会に申し込む</a>
+  <a href="https://lin.ee/XXXXXXX" class="btn bl" data-track="sticky-line" target="_blank" rel="noopener">LINEで相談</a>
+</div>
+
+<script src="tracker.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const hbg = document.querySelector('.hbg');
+  hbg?.addEventListener('click', () => document.body.classList.toggle('nopen'));
+  document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('nopen')));
+  const io = new IntersectionObserver((es) => {
+    es.forEach((e,i) => {
+      if(e.isIntersecting){
+        e.target.style.transitionDelay=(i*70)+'ms';
+        e.target.classList.add('on');
+      } else {
+        e.target.style.transition='none';
+        e.target.style.transitionDelay='0ms';
+        e.target.classList.remove('on');
+        requestAnimationFrame(()=>{ e.target.style.transition=''; });
+      }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll('.fu').forEach(el => io.observe(el));
+  const stk = document.getElementById('stk');
+  window.addEventListener('scroll', () => { stk.style.display = window.scrollY > 280 ? 'flex' : 'none'; }, {passive:true});
+
+  function showCat(id) {
+    document.querySelectorAll('.faq-cat').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.faq-nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('cat-' + id).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+  function toggle(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
