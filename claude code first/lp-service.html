@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>自社LP制作｜メンズエステ・デリヘル専門</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --pk:#e91e8c;--pu:#7c3aed;--gd:#f59e0b;--tl:#06b6d4;
+  --pk2:#ff006e;--pu2:#a855f7;
+  --bg:#fff;--bg2:#faf8ff;--bg3:#f0ebff;
+  --card:#fff;--bdr:#e8e0f8;
+  --tx:#1a0a2e;--mu:#6b5b8a;
+  --ff:"Inter","Noto Sans JP",sans-serif;
+  --ffs:"Shippori Mincho",serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --w:1140px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:var(--w);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+
+/* GRADIENTS */
+.g1{background:linear-gradient(135deg,var(--pk),var(--pu))}
+.g2{background:linear-gradient(135deg,var(--pu),var(--tl))}
+.gc{background:linear-gradient(135deg,#fff8,#f0ebff88);backdrop-filter:blur(8px)}
+
+/* ANIMATIONS */
+.fu{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.fu.on{opacity:1;transform:none}
+
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(233,30,140,.4)}70%{box-shadow:0 0 0 16px rgba(233,30,140,0)}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--w);margin:0 auto}
+.logo{font-family:var(--ffs);font-size:1.1rem;font-weight:700;background:linear-gradient(135deg,var(--pk),var(--pu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-cta{padding:10px 22px;border-radius:999px;font-size:.85rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu));animation:pulse 2s infinite}
+
+/* HERO */
+.hero{position:relative;padding:80px 0 96px;background:linear-gradient(160deg,#fff 0%,#f5f0ff 50%,#ffe0f5 100%);overflow:hidden}
+.hero::before{content:"";position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(233,30,140,.12),transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.1),transparent 70%);pointer-events:none}
+.hero-label{display:inline-block;padding:6px 16px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.06em;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu));margin-bottom:20px}
+.hero h1{font-family:var(--ffs);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.25;margin-bottom:24px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--pk),var(--pu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-family:var(--ffs);font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--mu);margin-bottom:40px;line-height:2}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-main{padding:16px 36px;border-radius:999px;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu));box-shadow:0 8px 32px rgba(233,30,140,.35);transition:transform .2s,box-shadow .2s}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(233,30,140,.45)}
+.btn-sub{padding:16px 36px;border-radius:999px;font-weight:700;font-size:1rem;border:2px solid var(--pk);color:var(--pk);transition:all .2s}
+.btn-sub:hover{background:var(--pk);color:#fff}
+
+/* COST BARS */
+.cost-wrap{margin-top:56px}
+.cost-title{font-family:var(--ffs);font-size:.9rem;font-weight:700;color:var(--mu);margin-bottom:16px;letter-spacing:.04em}
+.bar-row{margin-bottom:14px}
+.bar-label{display:flex;justify-content:space-between;font-size:.82rem;font-weight:600;margin-bottom:6px}
+.bar-label span:last-child{color:var(--pk);font-weight:700}
+.bar-track{height:12px;border-radius:999px;background:#f0ebff;overflow:hidden}
+.bar-fill{height:100%;border-radius:999px;width:0;transition:width 1.4s var(--ease)}
+.bar-fill.b1{background:linear-gradient(90deg,#ff4444,#e91e8c)}
+.bar-fill.b2{background:linear-gradient(90deg,#f59e0b,#e91e8c)}
+.bar-fill.b3{background:linear-gradient(90deg,var(--pk),var(--pu))}
+.bar-fill.b4{background:linear-gradient(90deg,var(--tl),var(--pu))}
+
+/* MARQUEE */
+.marq{padding:18px 0;background:linear-gradient(135deg,var(--pk),var(--pu));overflow:hidden}
+.marq-track{display:flex;white-space:nowrap;animation:marquee 18s linear infinite}
+.marq-item{font-size:.85rem;font-weight:700;color:#fff;padding:0 32px;opacity:.9}
+.marq-dot{color:rgba(255,255,255,.5)}
+
+/* SECTION HEADINGS */
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-label{display:inline-block;padding:4px 14px;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.07em;color:var(--pk);border:1.5px solid var(--pk);margin-bottom:14px}
+.sec-head h2{font-family:var(--ffs);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;line-height:1.3}
+.sec-head h2 em{font-style:normal;background:linear-gradient(135deg,var(--pk),var(--pu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sec-head p{font-family:var(--ffs);font-size:.95rem;color:var(--mu);margin-top:12px;line-height:1.9}
+
+/* PAIN */
+.pain{background:var(--bg2)}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.pain-card{padding:28px;border-radius:16px;border:1.5px solid var(--bdr);background:var(--card);transition:border-color .2s,box-shadow .2s}
+.pain-card:hover{border-color:var(--pk);box-shadow:0 8px 32px rgba(233,30,140,.1)}
+.pain-icon{font-size:2rem;margin-bottom:14px}
+.pain-card h3{font-family:var(--ffs);font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--pk)}
+.pain-card p{font-family:var(--ffs);font-size:.88rem;color:var(--mu);line-height:1.9}
+
+/* DATA STATS */
+.stats{background:linear-gradient(135deg,#1a0a2e,#2d0f5a)}
+.stats .sec-head h2,.stats .sec-head p{color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.stat-card{text-align:center;padding:32px 20px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.stat-num{font-family:var(--ffs);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;background:linear-gradient(135deg,var(--pk),var(--pu2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-unit{font-size:.9rem;font-weight:700;color:rgba(255,255,255,.6)}
+.stat-label{font-family:var(--ffs);font-size:.85rem;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.7}
+
+/* COST TABLE */
+.cost-sec{background:var(--bg3)}
+.tbl-wrap{overflow-x:auto;border-radius:16px;box-shadow:0 8px 40px rgba(124,58,237,.1)}
+table{width:100%;border-collapse:collapse;background:#fff}
+th{padding:16px 20px;font-size:.82rem;font-weight:700;letter-spacing:.04em;background:linear-gradient(135deg,var(--pk),var(--pu));color:#fff;text-align:center}
+th:first-child{text-align:left;border-radius:16px 0 0 0}
+th:last-child{border-radius:0 16px 0 0}
+td{padding:14px 20px;font-size:.88rem;border-bottom:1px solid var(--bdr);text-align:center}
+td:first-child{text-align:left;font-family:var(--ffs);font-weight:600}
+tr.hl td{background:linear-gradient(90deg,rgba(233,30,140,.05),rgba(124,58,237,.05));font-weight:700;color:var(--pk)}
+.red{color:#e53e3e;font-weight:700}
+.grn{color:#38a169;font-weight:700}
+
+/* SEO */
+.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:700px){.seo-grid{grid-template-columns:1fr}}
+.seo-card{padding:32px;border-radius:20px;border:1.5px solid var(--bdr);background:var(--card)}
+.seo-card h3{font-family:var(--ffs);font-size:1.1rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.seo-badge{padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu))}
+.seo-list{list-style:none}
+.seo-list li{font-family:var(--ffs);font-size:.88rem;color:var(--mu);padding:8px 0;border-bottom:1px solid var(--bdr);display:flex;gap:10px}
+.seo-list li::before{content:"→";color:var(--pk);flex-shrink:0}
+
+/* FEATURES */
+.feat{background:var(--bg2)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.feat-card{padding:28px;border-radius:16px;background:var(--card);border:1.5px solid var(--bdr);transition:all .2s}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(124,58,237,.12);border-color:var(--pu)}
+.feat-num{font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--pu);margin-bottom:10px}
+.feat-card h3{font-family:var(--ffs);font-size:1rem;font-weight:700;margin-bottom:8px}
+.feat-card p{font-family:var(--ffs);font-size:.87rem;color:var(--mu);line-height:1.9}
+
+/* VOICES */
+.voice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.voice-card{padding:28px;border-radius:16px;background:var(--card);border:1.5px solid var(--bdr)}
+.voice-card blockquote{font-family:var(--ffs);font-size:.9rem;color:var(--mu);line-height:2;margin-bottom:16px;padding-left:14px;border-left:3px solid var(--pk)}
+.voice-name{font-family:var(--ffs);font-size:.82rem;font-weight:700}
+.voice-info{font-size:.78rem;color:var(--mu)}
+
+/* FLOW */
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;position:relative}
+.flow-card{text-align:center;padding:24px 16px;border-radius:16px;background:var(--card);border:1.5px solid var(--bdr)}
+.flow-num{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu));margin:0 auto 12px}
+.flow-card h3{font-family:var(--ffs);font-size:.92rem;font-weight:700;margin-bottom:6px}
+.flow-card p{font-family:var(--ffs);font-size:.82rem;color:var(--mu)}
+
+/* PRICE */
+.price{background:var(--bg3)}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto}
+@media(max-width:640px){.price-grid{grid-template-columns:1fr}}
+.price-card{padding:36px 28px;border-radius:20px;border:2px solid var(--bdr);background:var(--card);text-align:center}
+.price-card.rec{border-color:var(--pk);box-shadow:0 12px 48px rgba(233,30,140,.15)}
+.rec-badge{display:inline-block;padding:4px 14px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--pk),var(--pu));margin-bottom:16px}
+.price-name{font-family:var(--ffs);font-size:1.1rem;font-weight:700;margin-bottom:12px}
+.price-amt{font-family:var(--ffs);font-size:2.6rem;font-weight:800;background:linear-gradient(135deg,var(--pk),var(--pu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.price-unit{font-size:.85rem;color:var(--mu)}
+.price-list{list-style:none;margin:20px 0;text-align:left}
+.price-list li{font-family:var(--ffs);font-size:.87rem;padding:8px 0;border-bottom:1px solid var(--bdr);display:flex;gap:8px}
+.price-list li::before{content:"✓";color:var(--pk);font-weight:700;flex-shrink:0}
+
+/* CTA */
+.cta-sec{background:linear-gradient(135deg,var(--pk),var(--pu));text-align:center;padding:96px 24px}
+.cta-sec h2{font-family:var(--ffs);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#fff;margin-bottom:16px}
+.cta-sec p{font-family:var(--ffs);font-size:1rem;color:rgba(255,255,255,.85);margin-bottom:36px}
+.btn-white{padding:18px 48px;border-radius:999px;font-weight:700;font-size:1.05rem;color:var(--pk);background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.15);transition:transform .2s}
+.btn-white:hover{transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#1a0a2e;color:rgba(255,255,255,.5);text-align:center;padding:32px 24px;font-size:.82rem}
+
+@media(max-width:768px){
+  section{padding:64px 0}
+  .nav-cta{display:none}
+  .hero h1{font-size:1.9rem}
+  .hero-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">LP STUDIO｜業界特化型制作</div>
+    <a href="#contact" class="nav-cta">無料相談はこちら</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="w">
+    <div class="fu">
+      <span class="hero-label">メンズエステ・デリヘル専門 / LP制作</span>
+      <h1>媒体費に<em>月30万</em>払い続けますか？<br>自社集客に切り替える時代です。</h1>
+      <p class="hero-sub">シティヘブン・ふうぞくじゃぱんへの掲載に頼らず、<br>SEO・MEO対策で長期的な自社集客を実現するLPを制作します。</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-main">無料相談・お見積もり</a>
+        <a href="#price" class="btn-sub">料金を確認する</a>
+      </div>
+    </div>
+
+    <div class="cost-wrap fu">
+      <div class="cost-title">主要集客チャネル　月額費用比較（目安）</div>
+      <div class="bar-row">
+        <div class="bar-label"><span>シティヘブン（上位掲載）</span><span>月30〜80万円</span></div>
+        <div class="bar-track"><div class="bar-fill b1" data-w="90"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>ふうぞくじゃぱん</span><span>月15〜40万円</span></div>
+        <div class="bar-track"><div class="bar-fill b2" data-w="55"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>自社HP（SEO運用）</span><span>月3〜8万円</span></div>
+        <div class="bar-track"><div class="bar-fill b3" data-w="12"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>自社HP＋MEO対策</span><span>月5〜12万円</span></div>
+        <div class="bar-track"><div class="bar-fill b4" data-w="18"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq">
+  <div class="marq-track">
+    <span class="marq-item">媒体依存からの脱却 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">SEO対策で長期集客 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">月額費用を最大80%削減 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">MEOで近隣エリア独占 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">競合に差をつけるデザイン <span class="marq-dot">◆</span></span>
+    <span class="marq-item">スマホ最適化完全対応 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">媒体依存からの脱却 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">SEO対策で長期集客 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">月額費用を最大80%削減 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">MEOで近隣エリア独占 <span class="marq-dot">◆</span></span>
+    <span class="marq-item">競合に差をつけるデザイン <span class="marq-dot">◆</span></span>
+    <span class="marq-item">スマホ最適化完全対応 <span class="marq-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">PAIN POINT</span>
+      <h2>こんな<em>悩み</em>ありませんか？</h2>
+      <p>多くの経営者が媒体依存による慢性的なコスト高に苦しんでいます</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card fu"><div class="pain-icon">💸</div><h3>広告費が利益を圧迫</h3><p>媒体掲載費に月20〜80万円を費やし、売上が増えても手元に残らない状態が続いている</p></div>
+      <div class="pain-card fu"><div class="pain-icon">📉</div><h3>競合が多すぎて埋もれる</h3><p>シティヘブン内だけで数百店舗が並ぶ。上位表示には更なる追加費用がかかるジレンマ</p></div>
+      <div class="pain-card fu"><div class="pain-icon">🔒</div><h3>媒体のルールに縛られる</h3><p>掲載内容・写真・料金表示まで媒体の規約次第。自由な訴求ができない</p></div>
+      <div class="pain-card fu"><div class="pain-icon">📱</div><h3>SNS集客で疲弊している</h3><p>毎日の投稿・フォロワー管理に時間を取られ、本業に集中できない悪循環</p></div>
+      <div class="pain-card fu"><div class="pain-icon">🔄</div><h3>集客が媒体任せ</h3><p>媒体を止めた途端に集客がゼロになるリスク。自社資産が何も積み上がらない</p></div>
+      <div class="pain-card fu"><div class="pain-icon">📊</div><h3>データが手元にない</h3><p>どのキーワードで来店したか、どのページで離脱したか、分析ができない</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="w">
+    <div class="sec-head fu">
+      <h2 style="color:#fff">業界の<em>リアルな数字</em>を知ってください</h2>
+      <p style="color:rgba(255,255,255,.65)">データが示す、媒体依存モデルの限界と自社集客の可能性</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card fu">
+        <div class="stat-num" data-to="83">0</div><div class="stat-unit">%</div>
+        <div class="stat-label">媒体依存の店舗が<br>感じる「費用対効果の低下」</div>
+      </div>
+      <div class="stat-card fu">
+        <div class="stat-num" data-to="72">0</div><div class="stat-unit">%</div>
+        <div class="stat-label">スマホ検索ユーザーが<br>Googleマップで店舗を探す割合</div>
+      </div>
+      <div class="stat-card fu">
+        <div class="stat-num" data-to="3">0</div><div class="stat-unit">ヶ月</div>
+        <div class="stat-label">SEO対策開始から<br>検索流入が始まるまでの平均期間</div>
+      </div>
+      <div class="stat-card fu">
+        <div class="stat-num" data-to="68">0</div><div class="stat-unit">%</div>
+        <div class="stat-label">自社HP導入後に<br>媒体費用を削減できた店舗比率</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COST TABLE -->
+<section class="cost-sec">
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">COST COMPARE</span>
+      <h2>媒体 vs 自社HP<em>コスト比較</em></h2>
+    </div>
+    <div class="tbl-wrap fu">
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>シティヘブン</th>
+            <th>ふうぞくじゃぱん</th>
+            <th>自社HP＋SEO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>月額費用（目安）</td><td class="red">30〜80万円</td><td class="red">15〜40万円</td><td class="grn">3〜8万円</td></tr>
+          <tr><td>初年度総コスト</td><td class="red">360〜960万円</td><td class="red">180〜480万円</td><td class="grn">36〜96万円</td></tr>
+          <tr><td>資産として残るか</td><td>×</td><td>×</td><td class="grn">◎</td></tr>
+          <tr><td>SEO効果の蓄積</td><td>×</td><td>×</td><td class="grn">◎</td></tr>
+          <tr><td>デザイン自由度</td><td>△</td><td>△</td><td class="grn">◎</td></tr>
+          <tr class="hl"><td>3年間コスト差（最大）</td><td colspan="2" class="red">〜2,880万円</td><td class="grn">108〜288万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SEO/MEO -->
+<section>
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">SEO / MEO</span>
+      <h2>検索上位を<em>独占する</em>戦略</h2>
+      <p>広告費ゼロでも上位表示できる、SEO・MEOの実践的アプローチ</p>
+    </div>
+    <div class="seo-grid">
+      <div class="seo-card fu">
+        <h3><span class="seo-badge">SEO</span>検索エンジン最適化</h3>
+        <ul class="seo-list">
+          <li>「地域名＋メンズエステ」で上位表示を狙う</li>
+          <li>コンテンツ制作でE-E-A-T評価を高める</li>
+          <li>スキーママークアップで強調表示を獲得</li>
+          <li>内部リンク設計で回遊率を向上</li>
+          <li>ページスピード最適化（Core Web Vitals対応）</li>
+        </ul>
+      </div>
+      <div class="seo-card fu">
+        <h3><span class="seo-badge" style="background:linear-gradient(135deg,var(--tl),var(--pu))">MEO</span>Googleマップ最適化</h3>
+        <ul class="seo-list">
+          <li>Googleビジネスプロフィール完全最適化</li>
+          <li>口コミ獲得・返信テンプレート提供</li>
+          <li>写真・投稿の定期更新サポート</li>
+          <li>近隣エリア検索での3パック表示を狙う</li>
+          <li>Q&Aセクション活用で来店促進</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="feat">
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">FEATURES</span>
+      <h2>選ばれる<em>6つの理由</em></h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card fu"><div class="feat-num">FEATURE 01</div><h3>業界特化デザイン</h3><p>メンズエステ・デリヘルの集客に特化したUI/UXで、来店率の高いLPを設計します</p></div>
+      <div class="feat-card fu"><div class="feat-num">FEATURE 02</div><h3>SEO設計を最初から組み込む</h3><p>制作段階からキーワード設計・構造化データ・高速化を実装。後付け不要</p></div>
+      <div class="feat-card fu"><div class="feat-num">FEATURE 03</div><h3>スマホ完全最適化</h3><p>来店者の90%以上がスマホユーザー。タップしやすいUI設計で離脱率を最小化</p></div>
+      <div class="feat-card fu"><div class="feat-num">FEATURE 04</div><h3>予約導線を最適化</h3><p>LINE・電話・フォームへの導線を心理的に最適化。問い合わせCVRを最大化</p></div>
+      <div class="feat-card fu"><div class="feat-num">FEATURE 05</div><h3>分析ツール導入込み</h3><p>GA4・Googleサーチコンソールを設定済みでお渡し。改善サイクルをすぐ回せます</p></div>
+      <div class="feat-card fu"><div class="feat-num">FEATURE 06</div><h3>納品後サポート付き</h3><p>公開後3ヶ月間の修正・相談対応を無償提供。安心して運用をスタートできます</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section>
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">VOICE</span>
+      <h2>導入した経営者の<em>声</em></h2>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card fu">
+        <blockquote>シティヘブンへの掲載費が月50万円でしたが、自社HP導入後は月8万円の運用費で同等以上の集客ができています。投資回収は3ヶ月でした。</blockquote>
+        <div class="voice-name">東京・メンズエステ経営者 Kさん</div>
+        <div class="voice-info">導入6ヶ月 / 月間問い合わせ数3倍</div>
+      </div>
+      <div class="voice-card fu">
+        <blockquote>「地域名＋デリヘル」でGoogle1位になりました。媒体に頼らない集客がこんなに安定するとは思いませんでした。スタッフも増えました。</blockquote>
+        <div class="voice-name">大阪・デリヘル経営者 Tさん</div>
+        <div class="voice-info">導入9ヶ月 / 媒体費用80%削減</div>
+      </div>
+      <div class="voice-card fu">
+        <blockquote>MEO対策でGoogleマップの3パックに入るようになり、近隣からの新規が増えました。費用対効果が圧倒的に違います。</blockquote>
+        <div class="voice-name">名古屋・メンズエステ経営者 Mさん</div>
+        <div class="voice-info">導入4ヶ月 / 新規来店数2.4倍</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section style="background:var(--bg3)">
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">FLOW</span>
+      <h2>制作の<em>流れ</em></h2>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-card fu"><div class="flow-num">1</div><h3>無料相談</h3><p>現状の集客課題・目標をヒアリング</p></div>
+      <div class="flow-card fu"><div class="flow-num">2</div><h3>提案・お見積もり</h3><p>SEO戦略とデザイン方針をご提案</p></div>
+      <div class="flow-card fu"><div class="flow-num">3</div><h3>制作・実装</h3><p>約3〜4週間で高品質なLPを制作</p></div>
+      <div class="flow-card fu"><div class="flow-num">4</div><h3>公開・設定</h3><p>SEOツール・分析環境もセット</p></div>
+      <div class="flow-card fu"><div class="flow-num">5</div><h3>運用サポート</h3><p>3ヶ月間の無償サポート付き</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="price">
+  <div class="w">
+    <div class="sec-head fu">
+      <span class="sec-label">PRICE</span>
+      <h2>シンプルな<em>料金プラン</em></h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card fu">
+        <div class="price-name">スタンダードプラン</div>
+        <div class="price-amt">¥198,000</div><div class="price-unit">〜（税込）</div>
+        <ul class="price-list">
+          <li>LPデザイン・コーディング</li>
+          <li>スマホ最適化対応</li>
+          <li>SEO基本設定</li>
+          <li>GA4・サーチコンソール設定</li>
+          <li>納品後1ヶ月サポート</li>
+        </ul>
+        <a href="#contact" class="btn-sub" style="display:block;text-align:center;padding:14px;border-radius:999px;border:2px solid var(--pk);color:var(--pk);font-weight:700;margin-top:auto">相談してみる</a>
+      </div>
+      <div class="price-card rec fu">
+        <div class="rec-badge">おすすめ</div>
+        <div class="price-name">SEO強化プラン</div>
+        <div class="price-amt">¥298,000</div><div class="price-unit">〜（税込）</div>
+        <ul class="price-list">
+          <li>スタンダード全内容含む</li>
+          <li>キーワード戦略設計</li>
+          <li>MEO対策（Googleビジネス設定）</li>
+          <li>コンテンツSEO3記事</li>
+          <li>納品後3ヶ月サポート</li>
+        </ul>
+        <a href="#contact" class="btn-main" style="display:block;text-align:center;padding:14px;border-radius:999px;margin-top:auto">今すぐ無料相談</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <h2>媒体費用に頼らない<br>自社集客を今すぐ始めよう</h2>
+  <p>無料相談・お見積もりは完全無料。まずはお気軽にご連絡ください。</p>
+  <a href="tel:000-0000-0000" class="btn-white">無料相談はこちら</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 LP Studio. All rights reserved.</p>
+</footer>
+
+<script>
+// Fade-up IntersectionObserver
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.fu').forEach(el => io.observe(el));
+
+// Cost bar animation
+const barIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
+      barIO.unobserve(e.target);
+    }
+  });
+}, {threshold:.3});
+document.querySelectorAll('.cost-wrap').forEach(el => barIO.observe(el));
+
+// Counter animation
+const cntIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.querySelectorAll('[data-to]').forEach(el => {
+        const target = +el.dataset.to, dur = 1600;
+        const start = performance.now();
+        const tick = now => {
+          const p = Math.min((now - start) / dur, 1);
+          el.textContent = Math.round(p * target);
+          if(p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+      cntIO.unobserve(e.target);
+    }
+  });
+}, {threshold:.4});
+document.querySelectorAll('.stats').forEach(el => cntIO.observe(el));
+</script>
+</body>
+</html>

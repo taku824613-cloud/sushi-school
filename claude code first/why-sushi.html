@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>寿司職人を募集しています | AIに奪われない技術で世界へ | Tokyo Sushi Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="未経験から最短3ヶ月でプロ寿司職人へ。AIが仕事を奪う時代に、世界で12万人不足の寿司職人は年収2,000万円超も可能。無料体験入学受付中。">
+  <meta name="keywords" content="寿司職人 なり方, 寿司職人 募集, 寿司職人 年収, 寿司スクール 東京, 転職 寿司職人, 未経験 寿司職人">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;900&family=Inter:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Shippori+Mincho:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:    #070c18;
+      --sf:    #0b1120;
+      --card:  #0f1828;
+      --card2: #131f30;
+      --gold:  #f59e0b;
+      --gold2: #d97706;
+      --golds: rgba(245,158,11,.12);
+      --teal:  #22d3ee;
+      --teal2: #0891b2;
+      --teals: rgba(34,211,238,.10);
+      --yel:   #ffd93d;
+      --blue:  #3b82f6;
+      --blue2: #2563eb;
+      --blues: rgba(59,130,246,.12);
+      --red:   #ef4444;
+      --text:  #f0f4ff;
+      --body:  #c0cce8;
+      --muted: #7a84a8;
+      --bdr:   rgba(255,255,255,.08);
+      --bdrh:  rgba(59,130,246,.4);
+      --ff:    "Noto Sans JP","Inter",system-ui,sans-serif;
+      --ffs:   "Noto Serif JP",serif;
+      --ease:  cubic-bezier(.22,1,.36,1);
+      --maxw:  1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      line-height: 1.8;
+      padding-top: 62px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* ========== NAV ========== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 62px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(7,12,24,.92);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--bdr);
+    }
+    .nav-brand { font-size: .76rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 22px; border-radius: 999px;
+      background: var(--blue); color: #fff;
+      font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      transition: all 220ms var(--ease);
+    }
+    .nav-cta:hover { background: #60a5fa; box-shadow: 0 8px 28px rgba(59,130,246,.45); transform: translateY(-1px); }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 100px 0 80px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 100% at 5% 5%,  rgba(59,130,246,.20) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 80% at 95% 85%, rgba(34,211,238,.12) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 50% at 50% 110%,rgba(245,158,11,.06) 0%, transparent 50%);
+      animation: bgpulse 14s ease-in-out infinite alternate;
+    }
+    @keyframes bgpulse {
+      0%   { transform: scale(1)    translateY(0%);  opacity: 1; }
+      50%  { transform: scale(1.08) translateY(-3%); opacity: .88; }
+      100% { transform: scale(1)    translateY(0%);  opacity: 1; }
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 72px 72px;
+      animation: gridscan 22s linear infinite;
+    }
+    @keyframes gridscan {
+      0%   { background-position: 0 0, 0 0; }
+      100% { background-position: 72px 72px, 72px 72px; }
+    }
+    #heroParticles {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      width: 100%; height: 100%;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 5px 16px; border-radius: 999px;
+      border: 1px solid rgba(59,130,246,.45); background: rgba(59,130,246,.1);
+      font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--blue);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+      animation: dotpulse 1.4s ease-in-out infinite;
+    }
+    @keyframes dotpulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: .3; transform: scale(.6); }
+    }
+    .hero h1 {
+      font-family: var(--ffs);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--blue); }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 700;
+      color: var(--body);
+      margin-bottom: 20px;
+      letter-spacing: .02em;
+      line-height: 1.65;
+    }
+    .hero-copy {
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--body);
+      line-height: 2;
+      margin-bottom: 36px;
+      max-width: 34rem;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 17px 38px; border-radius: 999px;
+      background: var(--blue); color: #fff;
+      font-size: .92rem; font-weight: 700; letter-spacing: .08em;
+      transition: all 250ms var(--ease); border: none; cursor: pointer; font-family: var(--ff);
+      box-shadow: 0 4px 28px rgba(59,130,246,.38);
+    }
+    .btn-primary:hover {
+      background: #60a5fa;
+      box-shadow: 0 14px 44px rgba(59,130,246,.55);
+      transform: translateY(-3px);
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 28px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22); background: transparent; color: var(--body);
+      font-size: .88rem; font-weight: 500;
+      transition: all 240ms; cursor: pointer; font-family: var(--ff);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,.5); color: var(--text); transform: translateY(-2px); }
+    .hero-scroll {
+      display: flex; align-items: center; gap: 12px;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+    }
+    .hero-scroll-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, var(--muted), transparent);
+      animation: scrollfade 2s ease-in-out infinite;
+    }
+    @keyframes scrollfade {
+      0%,100% { opacity: .3; transform: scaleY(.5) translateY(-8px); }
+      50%      { opacity: 1;  transform: scaleY(1)  translateY(0); }
+    }
+
+    /* hero widget */
+    .hero-widget {
+      background: var(--card); border: 1px solid var(--bdr); border-radius: 24px;
+      padding: 32px; display: flex; flex-direction: column; gap: 0;
+      box-shadow: 0 60px 120px rgba(0,0,0,.65);
+      position: relative; overflow: hidden;
+    }
+    .hero-widget::before {
+      content: "";
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--teal) 60%, transparent);
+    }
+    .hw-block { padding: 22px 0; border-bottom: 1px solid var(--bdr); }
+    .hw-block:first-child { padding-top: 0; }
+    .hw-block:last-child  { border-bottom: none; padding-bottom: 0; }
+    .hw-label { font-size: .86rem; letter-spacing: .16em; text-transform: uppercase; color: var(--body); margin-bottom: 10px; font-weight: 700; }
+    .hw-num {
+      font-size: clamp(3rem, 5.5vw, 4.2rem);
+      font-weight: 900; line-height: 1; letter-spacing: -.04em;
+      color: var(--gold); font-variant-numeric: tabular-nums;
+      font-family: "Inter", sans-serif;
+      text-shadow: 0 0 28px rgba(245,158,11,.7), 0 0 56px rgba(245,158,11,.35), 0 0 100px rgba(245,158,11,.15);
+      animation: numglow-gold 3s ease-in-out infinite alternate;
+    }
+    .hw-num.blue {
+      color: var(--teal);
+      text-shadow: 0 0 28px rgba(34,211,238,.7), 0 0 56px rgba(34,211,238,.35), 0 0 100px rgba(34,211,238,.15);
+      animation: numglow-teal 3s ease-in-out infinite alternate;
+    }
+    @keyframes numglow-gold {
+      0%   { text-shadow: 0 0 18px rgba(245,158,11,.45), 0 0 36px rgba(245,158,11,.2); }
+      100% { text-shadow: 0 0 44px rgba(245,158,11,.95), 0 0 88px rgba(245,158,11,.55), 0 0 140px rgba(245,158,11,.2); }
+    }
+    @keyframes numglow-teal {
+      0%   { text-shadow: 0 0 18px rgba(34,211,238,.45), 0 0 36px rgba(34,211,238,.2); }
+      100% { text-shadow: 0 0 44px rgba(34,211,238,.95), 0 0 88px rgba(34,211,238,.55), 0 0 140px rgba(34,211,238,.2); }
+    }
+    .hw-desc { font-size: .88rem; font-weight: 500; color: var(--body); margin-top: 7px; line-height: 1.7; }
+    .hw-mini { display: flex; justify-content: space-between; align-items: center; }
+    .hw-mini-label { font-size: .85rem; font-weight: 500; color: var(--muted); }
+    .hw-mini-val { font-size: .95rem; font-weight: 700; color: var(--text); }
+
+    @media(max-width:900px) { .hero-inner { grid-template-columns: 1fr; } }
+    @media(max-width:600px) { .hero { padding: 80px 0 60px; } .hero h1 { font-size: 2.4rem; } }
+
+    /* ========== TICKER ========== */
+    .ticker {
+      background: var(--sf);
+      border-top: 1px solid var(--bdr);
+      border-bottom: 1px solid var(--bdr);
+      overflow: hidden; height: 46px; display: flex; align-items: center;
+    }
+    .ticker-track {
+      display: flex;
+      animation: tickermove 32s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    @keyframes tickermove { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .ticker-item {
+      padding: 0 36px;
+      font-size: .74rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 12px;
+      border-right: 1px solid var(--bdr);
+      flex-shrink: 0;
+    }
+    .ticker-val { color: var(--teal); font-weight: 700; }
+    .ticker-neg { color: var(--gold); font-weight: 700; }
+
+    /* ========== SECTION BASE ========== */
+    .sec { padding: 96px 0; }
+    .sec-bg-sf   { background: var(--sf); }
+    .sec-bg-card { background: var(--card); }
+    .sec-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .66rem; letter-spacing: .28em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .sec-eyebrow::before { content:""; display:block; width:20px; height:1px; }
+    .eyebrow-gold { color: var(--gold); } .eyebrow-gold::before { background: var(--gold); }
+    .eyebrow-teal { color: var(--teal); } .eyebrow-teal::before { background: var(--teal); }
+    .eyebrow-yel  { color: var(--yel);  } .eyebrow-yel::before  { background: var(--yel);  }
+    .eyebrow-blue { color: var(--blue); } .eyebrow-blue::before { background: var(--blue); }
+    .eyebrow-red  { color: #f87171;     } .eyebrow-red::before  { background: #f87171;     }
+    .sec h2 {
+      font-family: 'Playfair Display', 'Shippori Mincho', var(--ffs);
+      font-size: clamp(1.9rem, 3.5vw, 3rem);
+      font-weight: 700; line-height: 1.2; letter-spacing: 0em; margin-bottom: 16px;
+    }
+    .sec-sub {
+      font-size: 1.05rem; font-weight: 500;
+      color: var(--body);
+      max-width: 40rem; line-height: 1.95; margin-bottom: 52px;
+    }
+    .source-note { font-size: .72rem; color: var(--muted); opacity: .75; margin-top: 24px; line-height: 1.8; }
+
+    /* ========== FADE UP ========== */
+    .fu { opacity: 0; transform: translateY(40px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--fd, 0ms); }
+    .fu.on { opacity: 1; transform: translateY(0); }
+
+    /* ========== AI RISK SECTION ========== */
+    .ai-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    @media(max-width:860px) { .ai-layout { grid-template-columns: 1fr; } }
+
+    .donut-wrap {
+      position: relative; width: 300px; height: 300px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #donutCanvas { position: absolute; inset: 0; }
+    .donut-center { text-align: center; position: relative; z-index: 1; }
+    .donut-pct { font-size: 4.6rem; font-weight: 900; color: var(--gold); line-height: 1; font-family: "Inter",sans-serif; text-shadow: 0 0 32px rgba(245,158,11,.75), 0 0 64px rgba(245,158,11,.4); animation: numglow-gold 3s ease-in-out infinite alternate; }
+    .donut-lbl { font-size: .88rem; font-weight: 700; color: var(--body); letter-spacing: .14em; margin-top: 10px; text-transform: uppercase; }
+
+    .risk-list { display: flex; flex-direction: column; gap: 14px; }
+    .risk-item { display: flex; align-items: center; gap: 10px; }
+    .risk-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .risk-job { font-size: .92rem; font-weight: 600; color: var(--text); min-width: 140px; }
+    .risk-bar-bg { flex: 1; height: 8px; background: rgba(255,255,255,.06); border-radius: 999px; overflow: hidden; }
+    .risk-bar-fill { height: 100%; border-radius: 999px; width: 0; transition: width 1.4s var(--ease); }
+    .risk-pct { font-size: .88rem; font-weight: 700; min-width: 40px; text-align: right; }
+
+    .ai-facts { display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
+    .ai-fact {
+      display: flex; align-items: flex-start; gap: 18px;
+      padding: 22px; border-radius: 16px;
+      background: var(--card2); border: 1px solid var(--bdr);
+      transition: border-color 250ms, transform 250ms;
+    }
+    .ai-fact:hover { border-color: rgba(245,158,11,.35); transform: translateX(4px); }
+    .ai-fact-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .ai-fact-title { font-size: 1rem; font-weight: 700; margin-bottom: 7px; color: var(--text); }
+    .ai-fact-text { font-size: .96rem; font-weight: 500; color: var(--body); line-height: 1.9; }
+
+    /* ========== BENEFITS SECTION ========== */
+    .ben-intro { text-align: center; margin-bottom: 64px; }
+    .ben-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media(max-width:900px) { .ben-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:520px)  { .ben-grid { grid-template-columns: 1fr; } }
+
+    .ben-card {
+      background: var(--card);
+      border: 1px solid var(--bdr);
+      border-radius: 20px;
+      padding: 32px 26px;
+      position: relative; overflow: hidden;
+      transition: all 300ms var(--ease);
+    }
+    .ben-card::after {
+      content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--teal));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 300ms var(--ease);
+    }
+    .ben-card:hover { border-color: var(--bdrh); transform: translateY(-7px); box-shadow: 0 32px 64px rgba(0,0,0,.5); }
+    .ben-card:hover::after { transform: scaleX(1); }
+    .ben-icon { font-size: 2.8rem; margin-bottom: 18px; }
+    .ben-title { font-size: 1.12rem; font-weight: 800; margin-bottom: 12px; color: var(--text); }
+    .ben-text  { font-size: 1rem;   font-weight: 500; color: var(--body); line-height: 1.95; }
+    .ben-tag {
+      display: inline-block; margin-top: 16px;
+      padding: 3px 12px; border-radius: 999px;
+      background: var(--blues); border: 1px solid rgba(59,130,246,.28);
+      font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--blue);
+    }
+
+    /* ========== GLOBAL DEMAND ========== */
+    .gstats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 52px; align-items: stretch; }
+    @media(max-width:720px) { .gstats-grid { grid-template-columns: 1fr 1fr; } }
+
+    .gstat {
+      background: var(--card); border: 1px solid var(--bdr); border-radius: 18px;
+      padding: 28px 22px; text-align: center;
+      position: relative; overflow: hidden;
+      transition: border-color 280ms, transform 280ms;
+    }
+    .gstat:hover { border-color: var(--bdrh); transform: translateY(-5px); box-shadow: 0 20px 48px rgba(0,0,0,.4); }
+    .gstat::after {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--teal), transparent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 280ms;
+    }
+    .gstat:hover::after { transform: scaleX(1); }
+    .gstat { display: flex; flex-direction: column; align-items: center; }
+    .gstat-num-wrap {
+      display: flex; align-items: baseline; justify-content: center; gap: 4px;
+      min-height: 68px; padding-bottom: 8px; flex-shrink: 0;
+    }
+    .gstat-big {
+      font-size: clamp(2.6rem, 4vw, 3.5rem); font-weight: 800;
+      font-family: "Inter", sans-serif; letter-spacing: .02em; line-height: 1;
+      background: linear-gradient(150deg, #bae6fd 0%, #22d3ee 55%, #0891b2 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 14px rgba(34,211,238,.55));
+    }
+    .gstat-unit {
+      font-size: .95rem; font-weight: 700; font-family: "Noto Sans JP", sans-serif;
+      line-height: 1; padding-bottom: 3px; color: #67e8f9; -webkit-text-fill-color: #67e8f9;
+    }
+    .gstat-label { font-size: .9rem; font-weight: 600; color: var(--body); line-height: 1.65; text-align: center; flex: 1; display: flex; align-items: flex-start; justify-content: center; }
+
+    .country-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    @media(max-width:860px) { .country-row { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width:480px) { .country-row { grid-template-columns: 1fr 1fr; } }
+    .country-pill {
+      display: flex; align-items: center; justify-content: space-between; gap: 6px;
+      padding: 12px 16px; border-radius: 12px;
+      background: var(--card2); border: 1px solid var(--bdr);
+      font-size: .88rem; font-weight: 500; color: var(--text);
+      transition: border-color 220ms, transform 220ms, box-shadow 220ms;
+    }
+    .country-pill:hover { border-color: var(--bdrh); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(59,130,246,.2); }
+    .country-pill .pill-left { display: flex; align-items: center; gap: 8px; }
+    .country-pill strong { color: var(--teal); font-family: "Inter",sans-serif; font-size: .92rem; font-weight: 700; white-space: nowrap; text-shadow: 0 0 12px rgba(34,211,238,.5); }
+    .flag { font-size: 1.1rem; }
+
+    /* ========== SALARY SECTION ========== */
+    .salary-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start; }
+    @media(max-width:860px) { .salary-layout { grid-template-columns: 1fr; } }
+
+    .chart-card {
+      background: var(--card); border: 1px solid var(--bdr); border-radius: 20px;
+      padding: 32px 28px; position: relative; overflow: hidden;
+    }
+    .chart-card::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    }
+    .chart-card-title { font-size: .82rem; letter-spacing: .18em; text-transform: uppercase; color: var(--body); margin-bottom: 24px; font-weight: 700; }
+    .sal-wrap { display: flex; flex-direction: column; gap: 20px; }
+    .sal-row  { display: flex; flex-direction: column; gap: 7px; }
+    .sal-head { display: flex; justify-content: space-between; align-items: center; }
+    .sal-track { height: 12px; background: rgba(255,255,255,.05); border-radius: 999px; overflow: hidden; position: relative; }
+    .sal-fill  {
+      height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, #0891b2, #22d3ee, #a5f3fc);
+      background-size: 200% 100%;
+      width: 0; transition: width 1.6s var(--ease);
+      box-shadow: 0 0 12px rgba(34,211,238,.5);
+      animation: barshine 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes barshine {
+      0%   { background-position: 0% 50%;   box-shadow: 0 0 10px rgba(34,211,238,.4); }
+      100% { background-position: 100% 50%; box-shadow: 0 0 22px rgba(34,211,238,.75); }
+    }
+    .sal-country { font-size: .96rem; font-weight: 700; color: var(--text); }
+    .sal-amount  { font-size: .96rem; font-weight: 700;
+      background: linear-gradient(90deg, #67e8f9, #22d3ee);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 8px rgba(34,211,238,.4));
+    }
+
+    /* ========== WAGE CHART ========== */
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 24px; }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 500; color: var(--body); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    #wageCanvas { width: 100%; display: block; border-radius: 8px; }
+
+    /* ========== FLASH STRIP ========== */
+    .flash-strip {
+      background: linear-gradient(90deg, #060a15 0%, #0b1628 50%, #060a15 100%);
+      border-top: 1px solid var(--bdr); border-bottom: 1px solid var(--bdr);
+      padding: 56px 0; position: relative; overflow: hidden;
+    }
+    .flash-strip::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 120% at 50% 50%, rgba(34,211,238,.07) 0%, transparent 65%);
+      animation: flashbg 9s ease-in-out infinite alternate;
+    }
+    @keyframes flashbg { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.3); opacity: 1; } }
+    .flash-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 0;
+    }
+    @media(max-width:720px) { .flash-inner { grid-template-columns: 1fr 1fr 1fr; } .flash-sep { display: none; } }
+    .flash-item { text-align: center; padding: 0 16px; }
+    .flash-num {
+      font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; font-family: "Inter", sans-serif;
+      line-height: 1; letter-spacing: -.02em; margin-bottom: 10px;
+      background: linear-gradient(150deg, #fde68a 0%, #f59e0b 55%, #b45309 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 18px rgba(245,158,11,.55));
+    }
+    .flash-num.c-teal {
+      background: linear-gradient(150deg, #a5f3fc 0%, #22d3ee 55%, #0891b2 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 18px rgba(34,211,238,.55));
+    }
+    .flash-unit { font-size: .45em; margin-left: 2px; font-family: "Noto Sans JP", sans-serif; -webkit-text-fill-color: rgba(255,255,255,.55); background: none; -webkit-background-clip: unset; background-clip: unset; }
+    .flash-label { font-size: .84rem; font-weight: 600; color: var(--body); letter-spacing: .06em; }
+    .flash-sep { width: 1px; height: 72px; background: rgba(255,255,255,.08); justify-self: center; }
+
+    /* ========== COMPARISON SECTION ========== */
+    .risk-visual { width: 100%; margin-bottom: 40px; }
+    #riskCompCanvas { width: 100%; display: block; border-radius: 12px; }
+    .cmp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    @media(max-width:760px) { .cmp-grid { grid-template-columns: 1fr; } }
+
+    .cmp-card { border-radius: 18px; padding: 28px 24px; border: 1px solid var(--bdr); display: flex; flex-direction: column; align-items: flex-start; }
+    .cmp-card.danger { background: rgba(239,68,68,.06);   border-color: rgba(239,68,68,.22); }
+    .cmp-card.mid    { background: rgba(255,217,61,.05);  border-color: rgba(255,217,61,.18); }
+    .cmp-card.safe   { background: rgba(34,211,238,.06);  border-color: rgba(34,211,238,.22); }
+
+    .cmp-badge {
+      display: inline-block; padding: 3px 14px; border-radius: 999px;
+      font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .badge-red  { background: rgba(239,68,68,.15);  color: #f87171; border: 1px solid rgba(239,68,68,.3); }
+    .badge-teal { background: rgba(34,211,238,.12); color: var(--teal); border: 1px solid rgba(34,211,238,.3); }
+    .badge-yel  { background: rgba(255,217,61,.12); color: var(--yel);  border: 1px solid rgba(255,217,61,.3); }
+
+    .cmp-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; color: var(--text); }
+    .cmp-risk-pct {
+      font-size: 3rem; font-weight: 900; font-family: "Inter", sans-serif;
+      line-height: 1; margin: 10px 0 14px;
+    }
+    .danger .cmp-risk-pct { color: #f87171; text-shadow: 0 0 24px rgba(248,113,113,.55); }
+    .mid    .cmp-risk-pct { color: var(--yel);  text-shadow: 0 0 24px rgba(255,217,61,.55); }
+    .safe   .cmp-risk-pct { color: var(--teal); text-shadow: 0 0 24px rgba(34,211,238,.55); }
+    .cmp-mini-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .cmp-mini-list li { display: flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 500; color: var(--body); }
+    .cmp-mini-list li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+    .danger .cmp-mini-list li::before { background: #f87171; }
+    .mid    .cmp-mini-list li::before { background: var(--yel); }
+    .safe   .cmp-mini-list li::before { background: var(--teal); }
+
+    /* ========== CTA SECTION ========== */
+    .teaser {
+      background: linear-gradient(135deg, #080c1a 0%, #111828 50%, #080c1a 100%);
+      position: relative; overflow: hidden;
+    }
+    .teaser::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 100% at 25% 50%, rgba(59,130,246,.13) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 85% 50%, rgba(34,211,238,.09) 0%, transparent 50%);
+      animation: ctabg 11s ease-in-out infinite alternate;
+    }
+    @keyframes ctabg {
+      0%   { transform: scale(1)    translateY(0%); }
+      100% { transform: scale(1.12) translateY(-6%); }
+    }
+    .teaser-inner { position: relative; z-index: 1; text-align: center; padding: 108px 24px; }
+    .teaser-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 20px; border-radius: 999px;
+      background: rgba(59,130,246,.1); border: 1px solid rgba(59,130,246,.3);
+      font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blue);
+      margin-bottom: 30px;
+    }
+    .teaser-inner h2 {
+      font-family: 'Playfair Display', 'Shippori Mincho', var(--ffs);
+      font-size: clamp(2rem,4.5vw,3.4rem);
+      font-weight: 700; letter-spacing: 0em; margin-bottom: 20px;
+    }
+    .teaser-inner h2 .accent { color: var(--blue); }
+    .teaser-inner p {
+      font-size: 1.08rem; font-weight: 500; color: var(--body); line-height: 2; max-width: 540px; margin: 0 auto 40px;
+    }
+    .teaser-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 24px; }
+    .teaser-note { font-size: .8rem; font-weight: 500; color: var(--muted); }
+    .teaser-orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+    }
+    .teaser-orb1 {
+      width: 500px; height: 500px; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(59,130,246,.08) 0%, transparent 70%);
+      animation: orbpulse1 6s ease-in-out infinite;
+    }
+    .teaser-orb2 {
+      width: 280px; height: 280px; top: 20%; right: 10%;
+      background: radial-gradient(circle, rgba(34,211,238,.07) 0%, transparent 70%);
+      animation: orbpulse2 8s ease-in-out infinite;
+    }
+    @keyframes orbpulse1 { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity:.5; } 50% { transform: translate(-50%,-50%) scale(1.35); opacity:1; } }
+    @keyframes orbpulse2 { 0%,100% { transform: scale(1); opacity:.4; } 50% { transform: scale(1.5); opacity:.9; } }
+
+    /* ========== HIGHLIGHT BOX ========== */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(34,211,238,.07) 0%, rgba(14,22,40,.9) 60%);
+      border: 1px solid rgba(34,211,238,.35); border-radius: 20px;
+      padding: 32px 28px; margin-top: 16px;
+      position: relative; overflow: hidden;
+    }
+    .highlight-box::before {
+      content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent);
+      animation: hbscan 3.5s ease-in-out infinite;
+    }
+    @keyframes hbscan { 0%,100% { left: -100%; } 50% { left: 100%; } }
+    .highlight-box::after {
+      content: ""; position: absolute; top: -60px; right: -60px;
+      width: 180px; height: 180px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(34,211,238,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hb-label {
+      font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--teal); font-weight: 700; margin-bottom: 12px; opacity: .9;
+    }
+    .highlight-box .big-num {
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem); font-weight: 900; font-family: "Inter",sans-serif;
+      line-height: 1; margin-bottom: 14px;
+      background: linear-gradient(135deg, #a5f3fc 0%, #22d3ee 50%, #0891b2 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 18px rgba(34,211,238,.65));
+      animation: numglow-teal 3s ease-in-out infinite alternate;
+    }
+    .highlight-box p { font-size: .94rem; font-weight: 500; color: var(--body); line-height: 1.9; position: relative; z-index: 1; }
+
+    /* ========== FOOTER ========== */
+    .footer { background: #050810; border-top: 1px solid var(--bdr); padding: 32px 24px; text-align: center; font-size: .76rem; color: var(--muted); line-height: 2.2; }
+    .divider { height: 1px; background: var(--bdr); max-width: var(--maxw); margin: 0 auto; }
+
+    /* ========== FUTURISTIC RE-ENTRY EFFECTS ========== */
+
+    /* gstat HUD brackets */
+    .gstat-num-wrap { position: relative; }
+    .gstat-num-wrap::before,
+    .gstat-num-wrap::after {
+      content: ""; position: absolute;
+      width: 9px; height: 9px;
+      border-color: rgba(34,211,238,.32); border-style: solid;
+      transition: border-color .3s;
+    }
+    .gstat-num-wrap::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+    .gstat-num-wrap::after  { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+    .gstat:hover .gstat-num-wrap::before,
+    .gstat:hover .gstat-num-wrap::after { border-color: rgba(34,211,238,.8); }
+
+    /* gstat card sweep beam */
+    @keyframes gstat-beam {
+      0%   { transform: translateX(-115%); opacity: 0; }
+      10%  { opacity: 1; }
+      100% { transform: translateX(115%); opacity: .7; }
+    }
+    .gstat { overflow: hidden; }
+    .gstat.gstat-beam::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(34,211,238,.22) 50%, transparent 100%);
+      animation: gstat-beam .95s cubic-bezier(.4,0,.2,1) forwards;
+      pointer-events: none;
+      z-index: 5;
+      border-radius: inherit;
+    }
+
+    /* Number glitch flash on counter start */
+    @keyframes numglitch {
+      0%,100% { opacity: 1; transform: none; filter: none; }
+      8%  { transform: translateX(-3px) skewX(-6deg); opacity: .45; filter: hue-rotate(18deg) brightness(1.8); }
+      18% { transform: translateX(3px)  skewX(4deg);  opacity: .85; filter: brightness(1.3); }
+      30% { transform: translateX(-1px) skewX(-1deg); opacity: 1;   filter: none; }
+      45% { transform: none; }
+    }
+    .numglitch { animation: numglitch .6s ease forwards; }
+
+    /* h2 glitch-reveal on section entry */
+    @keyframes h2reveal {
+      0%   { opacity: 0; letter-spacing: .22em; transform: skewX(-5deg) translateY(-5px); }
+      25%  { opacity: .65; letter-spacing: .07em; transform: skewX(1.5deg) translateY(-1px); }
+      55%  { letter-spacing: .01em; transform: skewX(-.5deg); }
+      75%  { opacity: 1; }
+      90%  { transform: skewX(.5deg); }
+      100% { opacity: 1; letter-spacing: inherit; transform: none; }
+    }
+    .sec h2.h2reveal { animation: h2reveal .8s cubic-bezier(.22,1,.36,1) forwards; }
+
+    /* chart-card grid scan on entry */
+    .chart-card { overflow: hidden; }
+    @keyframes chartgrid-scan {
+      0%   { background-position: 0 0; opacity: 0; }
+      12%  { opacity: 1; }
+      100% { background-position: 0 -80px; opacity: 0; }
+    }
+    .chart-card.grid-scan::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(34,211,238,.07) 1px, transparent 1px);
+      background-size: 100% 20px;
+      animation: chartgrid-scan 1.6s ease forwards;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* comparison card pct number glow-in */
+    @keyframes pct-reveal {
+      0%   { opacity: 0; transform: scale(.85) translateY(6px); filter: blur(4px); }
+      60%  { opacity: .9; filter: blur(0); }
+      100% { opacity: 1; transform: none; filter: none; }
+    }
+    .cmp-risk-pct.pct-reveal { animation: pct-reveal .65s var(--ease) forwards; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">Tokyo Sushi Academy</div>
+  <a href="index.html" class="nav-cta">無料体験入学を申し込む &rarr;</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <canvas id="heroParticles"></canvas>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>キャリアチェンジ &mdash; 2024年最新</div>
+      <h1>寿司職人に、<br><span class="accent">なりませんか。</span></h1>
+      <p class="hero-sub">AIが仕事を奪う時代。<br>手の技術だけは、絶対に奪えない。</p>
+      <p class="hero-copy">世界中で熟練した寿司職人が12万人以上不足しています。年収2,000万円超えも珍しくない今、未経験から最短3ヶ月でプロへの道が開けています。</p>
+      <div class="hero-btns">
+        <a href="index.html" class="btn-primary">無料体験入学を見る &rarr;</a>
+        <a href="#s-benefits" class="btn-outline">寿司職人のメリットを知る</a>
+      </div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>スクロールして確認する</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-widget fu">
+        <div class="hw-block">
+          <div class="hw-label">ホワイトカラーのAI代替リスク</div>
+          <div class="hw-num" id="hw1">0%</div>
+          <div class="hw-desc">の事務・管理職が自動化の高リスクに分類 <span style="font-size:.8rem;color:var(--muted)">（Oxford研究）</span></div>
+        </div>
+        <div class="hw-block">
+          <div class="hw-label">世界の日本食レストラン数（2013&rarr;2023）</div>
+          <div class="hw-num blue" id="hw2">+0%</div>
+          <div class="hw-desc">の急増 &mdash; 熟練職人の供給が圧倒的に不足</div>
+        </div>
+        <div class="hw-block">
+          <div class="hw-mini">
+            <div class="hw-mini-label">米国・豪州の熟練職人 年収</div>
+            <div class="hw-mini-val" id="hw3">$0</div>
+          </div>
+        </div>
+        <div class="hw-block">
+          <div class="hw-mini">
+            <div class="hw-mini-label">独立開業後の収益ポテンシャル</div>
+            <div class="hw-mini-val" style="color:var(--teal)">2〜5倍</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ===== SECTION 1: AI RISK ===== -->
+<section class="sec sec-bg-sf" id="s-ai">
+  <div class="wrap">
+    <div class="ai-layout">
+      <div class="fu">
+        <div class="sec-eyebrow eyebrow-gold">データで見る現実</div>
+        <h2>ホワイトカラーの<br><span style="color:var(--gold)">47%</span>が<br>消える職業になる</h2>
+        <p class="sec-sub">オックスフォード大学（Frey &amp; Osborne）の研究によれば、ホワイトカラー職の約半数が自動化の高リスクに分類。ChatGPT普及以降、そのスピードは想定をはるかに超えて加速しています。</p>
+        <div class="ai-facts">
+          <div class="ai-fact">
+            <div class="ai-fact-icon">🤖</div>
+            <div>
+              <div class="ai-fact-title">事務・データ処理は削減が始まっている</div>
+              <div class="ai-fact-text">Goldman Sachs（2023）は3億人分の雇用がAIに影響されると試算。データ入力・書類作成はすでに大幅削減が進行中です。</div>
+            </div>
+          </div>
+          <div class="ai-fact">
+            <div class="ai-fact-icon">📊</div>
+            <div>
+              <div class="ai-fact-title">会計・法務・金融も例外ではない</div>
+              <div class="ai-fact-text">McKinsey Global Institute（2023）は2030年までに労働時間の30%が自動化されると予測。分析・レポート・契約審査はすでに大半がAIで代替可能です。</div>
+            </div>
+          </div>
+          <div class="ai-fact">
+            <div class="ai-fact-icon">📉</div>
+            <div>
+              <div class="ai-fact-title">世界経済フォーラムが警告する未来</div>
+              <div class="ai-fact-text">WEF「仕事の未来レポート2023」によれば、2027年までに8,300万の雇用が消滅する一方、熟練した技術職・職人職の需要は増加し続けます。</div>
+            </div>
+          </div>
+        </div>
+        <p class="source-note">※ Frey &amp; Osborne, Oxford University (2013/2023) / McKinsey Global Institute (2023) / Goldman Sachs Global Investment Research (2023) / World Economic Forum – Future of Jobs Report (2023)</p>
+      </div>
+      <div class="fu" style="display:flex;flex-direction:column;align-items:center;gap:32px">
+        <div class="donut-wrap">
+          <canvas id="donutCanvas" width="300" height="300"></canvas>
+          <div class="donut-center">
+            <div class="donut-pct" id="donutPct">0%</div>
+            <div class="donut-lbl">AI代替リスク</div>
+          </div>
+        </div>
+        <div style="width:100%;background:var(--card2);border:1px solid var(--bdr);border-radius:16px;padding:22px">
+          <div style="font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:var(--body);margin-bottom:18px;font-weight:700">職種別 AI代替リスク（Oxford研究）</div>
+          <div class="risk-list" id="riskList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: BENEFITS ===== -->
+<section class="sec" id="s-benefits">
+  <div class="wrap">
+    <div class="ben-intro fu">
+      <div class="sec-eyebrow eyebrow-blue" style="justify-content:center">寿司職人という選択</div>
+      <h2>職人だから<br>手に入れられるもの</h2>
+      <p class="sec-sub" style="margin:16px auto 0;text-align:center">スーツを脱いで、包丁を持つ。<br>それだけで、世界が変わります。</p>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-card fu">
+        <div class="ben-icon">🤲</div>
+        <div class="ben-title">AIに絶対奪われない技術</div>
+        <p class="ben-text">鮮魚の目利き、シャリの握り加減、職人の所作はデジタルに変換できません。ロボットには再現できない「手の記憶」こそが、AIの時代に最も価値を持つスキルです。</p>
+        <span class="ben-tag">未来永劫 需要あり</span>
+      </div>
+      <div class="ben-card fu">
+        <div class="ben-icon">💰</div>
+        <div class="ben-title">国によっては年収2,000万円超</div>
+        <p class="ben-text">オーストラリアでA$85,000、ニューヨークのオマカセ店では$150,000超の求人が実在します。腕と経験が収入に直結する、シンプルな実力主義の世界です。</p>
+        <span class="ben-tag">海外で年収が大幅UP</span>
+      </div>
+      <div class="ben-card fu">
+        <div class="ben-icon">🌍</div>
+        <div class="ben-title">世界45ヶ国以上で働ける</div>
+        <p class="ben-text">「寿司」は世界共通語です。英語が苦手でも、握りの技術さえあれば45ヶ国以上で求人が発生しています。住む国を自分で選ぶ自由が手に入ります。</p>
+        <span class="ben-tag">ビザ支援実績あり</span>
+      </div>
+      <div class="ben-card fu">
+        <div class="ben-icon">🏮</div>
+        <div class="ben-title">自分の店が持てる</div>
+        <p class="ben-text">カウンター10席のオマカセ店は、初期投資が他の飲食業より低く、客単価が高いビジネスモデルです。技術を磨けば、独立開業が現実的な選択肢になります。</p>
+        <span class="ben-tag">独立支援プログラムあり</span>
+      </div>
+      <div class="ben-card fu">
+        <div class="ben-icon">⚡</div>
+        <div class="ben-title">最短3ヶ月で現場へ</div>
+        <p class="ben-text">大学4年・専門学校2年は必要ありません。集中した職人訓練なら、最短3ヶ月で就業レベルの基礎技術が習得できます。キャリアチェンジのスピードが段違いです。</p>
+        <span class="ben-tag">最短3ヶ月カリキュラム</span>
+      </div>
+      <div class="ben-card fu">
+        <div class="ben-icon">🎯</div>
+        <div class="ben-title">年齢・国籍・前職は関係ない</div>
+        <p class="ben-text">20代の初めてのキャリア、30代の転職、40代のセカンドキャリアまで。包丁の前では全員が同じスタートラインに立ちます。実力主義の世界は、公平です。</p>
+        <span class="ben-tag">未経験入学OK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLASH STRIP ===== -->
+<section class="flash-strip" id="s-flash">
+  <div class="wrap flash-inner">
+    <div class="flash-item fu">
+      <div class="flash-num c-teal"><span id="fl1">0</span><span class="flash-unit">%</span></div>
+      <div class="flash-label">寿司職人 AI代替リスク</div>
+      <div style="font-size:.75rem;color:var(--teal);margin-top:5px;letter-spacing:.08em;opacity:.8">Oxford研究</div>
+    </div>
+    <div class="flash-sep"></div>
+    <div class="flash-item fu">
+      <div class="flash-num"><span id="fl2">0</span><span class="flash-unit">万人</span></div>
+      <div class="flash-label">世界の熟練職人不足数</div>
+      <div style="font-size:.75rem;color:var(--gold);margin-top:5px;letter-spacing:.08em;opacity:.8">推計・現在進行中</div>
+    </div>
+    <div class="flash-sep"></div>
+    <div class="flash-item fu">
+      <div class="flash-num c-teal" style="font-size:clamp(1.8rem,4vw,3.5rem)"><span id="fl3">$0</span></div>
+      <div class="flash-label">寿司職人 最高年収</div>
+      <div style="font-size:.75rem;color:var(--teal);margin-top:5px;letter-spacing:.08em;opacity:.8">NYC オマカセ店（実在求人）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: GLOBAL DEMAND ===== -->
+<section class="sec sec-bg-sf" id="s-global">
+  <div class="wrap">
+    <div class="fu">
+      <div class="sec-eyebrow eyebrow-yel">世界市場の現状</div>
+      <h2>世界が<br><span style="color:var(--yel)">職人を奪い合っている</span></h2>
+      <p class="sec-sub">日本食ブームは止まりません。JETRO（日本貿易振興機構）の調査では、海外の日本食レストランは2013年から2023年の10年間で3.4倍に急増。しかし熟練した寿司職人の数は、まったく追いついていません。</p>
+    </div>
+    <div class="gstats-grid">
+      <div class="gstat fu">
+        <div class="gstat-num-wrap"><span class="gstat-big" id="gs1">0</span><span class="gstat-unit">%</span></div>
+        <div class="gstat-label">過去10年間の<br>海外日本食レストラン増加率</div>
+      </div>
+      <div class="gstat fu">
+        <div class="gstat-num-wrap"><span class="gstat-big" id="gs2">0</span><span class="gstat-unit">万人</span></div>
+        <div class="gstat-label">世界で不足している<br>熟練寿司職人数（推計）</div>
+      </div>
+      <div class="gstat fu">
+        <div class="gstat-num-wrap"><span class="gstat-big" id="gs3">0</span><span class="gstat-unit">ヶ国</span></div>
+        <div class="gstat-label">日本食レストランが<br>展開する国数</div>
+      </div>
+      <div class="gstat fu">
+        <div class="gstat-num-wrap"><span class="gstat-big" id="gs4">0</span><span class="gstat-unit">万軒</span></div>
+        <div class="gstat-label">2023年の<br>世界の日本食レストラン数</div>
+      </div>
+    </div>
+    <div class="country-row">
+      <div class="country-pill fu" style="--fd:0ms"><span class="pill-left"><span class="flag">🇺🇸</span>アメリカ</span><strong>+42%</strong></div>
+      <div class="country-pill fu" style="--fd:80ms"><span class="pill-left"><span class="flag">🇬🇧</span>イギリス</span><strong>+38%</strong></div>
+      <div class="country-pill fu" style="--fd:160ms"><span class="pill-left"><span class="flag">🇦🇺</span>オーストラリア</span><strong>+51%</strong></div>
+      <div class="country-pill fu" style="--fd:240ms"><span class="pill-left"><span class="flag">🇸🇬</span>シンガポール</span><strong>+29%</strong></div>
+      <div class="country-pill fu" style="--fd:320ms"><span class="pill-left"><span class="flag">🇫🇷</span>フランス</span><strong>+34%</strong></div>
+      <div class="country-pill fu" style="--fd:400ms"><span class="pill-left"><span class="flag">🇦🇪</span>UAE</span><strong>+67%</strong></div>
+      <div class="country-pill fu" style="--fd:480ms"><span class="pill-left"><span class="flag">🇨🇦</span>カナダ</span><strong>+44%</strong></div>
+      <div class="country-pill fu" style="--fd:560ms"><span class="pill-left"><span class="flag">🇩🇪</span>ドイツ</span><strong>+31%</strong></div>
+    </div>
+    <p class="source-note fu" style="margin-top:24px">※ JETRO「2023年海外日本食レストラン調査」/ 農林水産省「日本食・食文化の魅力発信事業」データを参考</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: SALARY ===== -->
+<section class="sec" id="s-salary">
+  <div class="wrap">
+    <div class="salary-layout">
+      <div class="fu">
+        <div class="sec-eyebrow eyebrow-teal">収入の現実</div>
+        <h2>腕が上がれば<br><span style="color:var(--teal)">収入が上がる</span></h2>
+        <p class="sec-sub" style="margin-bottom:28px">ホワイトカラーと違い、給与は会社の業績や上司の評価に左右されません。寿司職人の収入は技術と評判に直結します。特に海外では人材不足から、高額オファーが相次いでいます。</p>
+        <div class="highlight-box">
+          <div class="hb-label">最高年収実績（熟練職人）</div>
+          <div class="big-num" id="salPeak">¥0</div>
+          <p>NY・シンガポールのオマカセ店では年収$150,000超の求人が実在。技術が「希少な文化的価値」として評価されているからです。</p>
+        </div>
+        <p class="source-note" style="margin-top:14px">※ ZipRecruiter, Seek.com.au, JobStreet のデータに基づく（2023-2024年）</p>
+      </div>
+      <div class="fu">
+        <div class="chart-card">
+          <div class="chart-card-title">寿司職人 年収（国別・熟練者）</div>
+          <div class="sal-wrap" id="salaryBars"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SECTION 5: WAGE CHART ===== -->
+<section class="sec sec-bg-sf" id="s-wage">
+  <div class="wrap">
+    <div class="fu">
+      <div class="sec-eyebrow eyebrow-teal">賃金の逆転現象</div>
+      <h2>職人の賃金が<br><span style="color:var(--teal)">ホワイトカラーを超えた</span></h2>
+      <p class="sec-sub">労働力不足が深刻化するなか、技術職・職人職の賃金は急上昇しています。AIに代替されつつあるホワイトカラーの給与上昇は鈍化し、両者の差は拡大する一方です。</p>
+    </div>
+    <div class="chart-card fu">
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>ホワイトカラー平均（事務・管理）</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>ブルーカラー平均（技術・職人）</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#22d3ee"></div>寿司職人（国内外平均）</div>
+      </div>
+      <canvas id="wageCanvas" height="320"></canvas>
+      <div style="display:flex;justify-content:space-between;margin-top:8px">
+        <span style="font-size:.66rem;color:var(--muted)">2019</span>
+        <span style="font-size:.66rem;color:var(--muted)">2020</span>
+        <span style="font-size:.66rem;color:var(--muted)">2021</span>
+        <span style="font-size:.66rem;color:var(--muted)">2022</span>
+        <span style="font-size:.66rem;color:var(--muted)">2023</span>
+        <span style="font-size:.66rem;color:var(--muted)">2024</span>
+      </div>
+    </div>
+    <p class="source-note fu" style="margin-top:16px">※ 厚生労働省 賃金構造基本統計調査 / ILO データ / 複数求人サイト平均値を参考に作成（指数化・2019年=100）</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: COMPARISON ===== -->
+<section class="sec" id="s-compare">
+  <div class="wrap">
+    <div class="fu" style="text-align:center;margin-bottom:52px">
+      <div class="sec-eyebrow eyebrow-red" style="justify-content:center">AI代替リスク比較</div>
+      <h2>数字が語る、<br><span style="color:#f87171">残酷な現実</span></h2>
+    </div>
+    <div class="risk-visual fu">
+      <canvas id="riskCompCanvas" height="220"></canvas>
+    </div>
+    <div class="cmp-grid">
+      <div class="cmp-card danger fu">
+        <span class="cmp-badge badge-red">HIGH RISK</span>
+        <div class="cmp-title">⚠ 事務・経理</div>
+        <div class="cmp-risk-pct" id="cr1">0%</div>
+        <ul class="cmp-mini-list">
+          <li>大手でリストラ進行中</li>
+          <li>賃金上昇ほぼゼロ</li>
+        </ul>
+      </div>
+      <div class="cmp-card mid fu">
+        <span class="cmp-badge badge-yel">MID RISK</span>
+        <div class="cmp-title">📊 営業・IT一般</div>
+        <div class="cmp-risk-pct" id="cr2">0%</div>
+        <ul class="cmp-mini-list">
+          <li>AI適応コストが永続的に発生</li>
+          <li>10年後の需要は不透明</li>
+        </ul>
+      </div>
+      <div class="cmp-card safe fu">
+        <span class="cmp-badge badge-teal">SAFE ✓</span>
+        <div class="cmp-title">🔵 寿司職人</div>
+        <div class="cmp-risk-pct" id="cr3">0%</div>
+        <ul class="cmp-mini-list">
+          <li>世界12万人不足・需要急増</li>
+          <li>技術は生涯の資産</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="teaser sec" id="s-cta">
+  <div class="teaser-orb teaser-orb1"></div>
+  <div class="teaser-orb teaser-orb2"></div>
+  <div class="teaser-inner">
+    <div class="teaser-pill fu">次のステップへ</div>
+    <h2 class="fu">今すぐ、<span class="accent">動き出せる。</span></h2>
+    <p class="fu">東京にある寿司職人育成スクールで、未経験からプロへ。就職・海外展開・独立開業まで、徹底サポートします。まずは無料の体験入学から始めてください。</p>
+    <div class="teaser-btns fu">
+      <a href="index.html" class="btn-primary">無料体験入学を申し込む &rarr;</a>
+      <a href="faq.html" class="btn-outline">よくある質問を見る</a>
+    </div>
+    <p class="teaser-note fu">オンライン説明会あり &nbsp;|&nbsp; 入校強制なし &nbsp;|&nbsp; 完全無料</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>&copy; 2024 Tokyo Sushi Academy &mdash; このページのデータは各種調査・研究・求人情報を参考に作成しています。</div>
+  <div><a href="index.html" style="color:var(--teal)">スクールサイトへ &rarr;</a></div>
+</footer>
+
+<script>
+/* ── UTILS ── */
+const $ = id => document.getElementById(id);
+const easeOut = t => 1 - Math.pow(1 - t, 3);
+const easeInOut = t => t < .5 ? 2*t*t : -1+(4-2*t)*t;
+
+/* ── TICKER ── */
+const tickerData = [
+  { label: 'ホワイトカラー AI代替リスク', val: '47%', neg: true },
+  { label: '海外寿司レストラン 10年間増加率', val: '+340%', neg: false },
+  { label: '世界の熟練職人不足数', val: '12万人以上', neg: false },
+  { label: '米・豪 熟練職人 年収', val: '$72,000〜', neg: false },
+  { label: '事務・経理 AI代替リスク', val: '68〜89%', neg: true },
+  { label: '2027年までに消滅する雇用', val: '8,300万', neg: true },
+  { label: '寿司職人 AI代替リスク', val: 'わずか4%', neg: false },
+  { label: '日本食レストラン展開国数', val: '45ヶ国以上', neg: false },
+  { label: 'NYC・SG オマカセ職人 年収', val: '$150,000超', neg: false },
+];
+(function buildTicker() {
+  const track = $('tickerTrack');
+  const html = tickerData.map(d =>
+    `<div class="ticker-item"><span>${d.label}</span><span class="${d.neg ? 'ticker-neg' : 'ticker-val'}">${d.val}</span></div>`
+  ).join('');
+  track.innerHTML = html + html; // duplicate for seamless loop
+})();
+
+/* ── PARTICLES ── */
+(function initParticles() {
+  const canvas = $('heroParticles');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const N = 70;
+  const particles = Array.from({length: N}, () => ({
+    x:   Math.random() * window.innerWidth,
+    y:   Math.random() * window.innerHeight,
+    r:   Math.random() * 1.8 + .5,
+    vx:  (Math.random() - .5) * .45,
+    vy:  (Math.random() - .5) * .45,
+    o:   Math.random() * .45 + .08,
+    col: Math.random() > .5 ? '59,130,246' : '34,211,238',
+  }));
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${p.col},${p.o})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+
+/* ── INTERSECTION OBSERVER (fade-up) — bidirectional ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('on'), i * 80);
+    } else {
+      // instant reset so re-entry replays the animation
+      entry.target.style.transition = 'none';
+      entry.target.classList.remove('on');
+      requestAnimationFrame(() => { entry.target.style.transition = ''; });
+    }
+  });
+}, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fu').forEach(el => io.observe(el));
+
+/* ── SECTION TRIGGERS — re-fires on every viewport entry ── */
+const secActive = new Set();
+
+function injectScanBeam(section) {
+  const pos = getComputedStyle(section).position;
+  if (pos === 'static') section.style.position = 'relative';
+  const beam = document.createElement('div');
+  beam.style.cssText = [
+    'position:absolute','left:0','right:0','height:2px','top:0','z-index:99',
+    'pointer-events:none','overflow:hidden',
+    'background:linear-gradient(90deg,transparent,rgba(34,211,238,.8) 38%,rgba(59,130,246,.7) 62%,transparent)',
+    'transition:top 1.6s cubic-bezier(.4,0,.8,1),opacity 1.6s ease',
+    'opacity:1',
+  ].join(';');
+  section.appendChild(beam);
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    beam.style.top = '100%';
+    beam.style.opacity = '0';
+  }));
+  setTimeout(() => beam.remove(), 1800);
+}
+
+function triggerH2Glitch(section) {
+  const h2 = section.querySelector('h2');
+  if (!h2) return;
+  h2.classList.remove('h2reveal');
+  void h2.offsetWidth;
+  h2.classList.add('h2reveal');
+  setTimeout(() => h2.classList.remove('h2reveal'), 950);
+}
+
+function triggerCardBeams() {
+  document.querySelectorAll('#s-global .gstat').forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.remove('gstat-beam');
+      void el.offsetWidth;
+      el.classList.add('gstat-beam');
+    }, i * 130);
+  });
+}
+
+function triggerChartGridScan(sectionId) {
+  document.querySelectorAll('#' + sectionId + ' .chart-card').forEach(el => {
+    el.classList.remove('grid-scan');
+    void el.offsetWidth;
+    el.classList.add('grid-scan');
+    setTimeout(() => el.classList.remove('grid-scan'), 1800);
+  });
+}
+
+const sectionIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !secActive.has(e.target.id)) {
+      secActive.add(e.target.id);
+      injectScanBeam(e.target);
+      triggerH2Glitch(e.target);
+      const id = e.target.id;
+      if (id === 's-ai')      { animateDonut(); buildRiskList(); }
+      if (id === 's-global')  { animateGstats(); triggerCardBeams(); }
+      if (id === 's-salary')  { animateSalaryBars(); triggerChartGridScan('s-salary'); }
+      if (id === 's-wage')    { setTimeout(() => { drawWageChart(); triggerChartGridScan('s-wage'); }, 300); }
+      if (id === 's-flash')   { animateFlash(); }
+      if (id === 's-compare') { setTimeout(() => { animateRiskComp(); triggerChartGridScan('s-compare'); }, 200); }
+    } else if (!e.isIntersecting) {
+      secActive.delete(e.target.id);
+    }
+  });
+}, { threshold: .12 });
+['s-ai','s-global','s-salary','s-wage','s-flash','s-compare'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) sectionIO.observe(el);
+});
+
+/* ── HERO COUNTERS ── */
+setTimeout(() => {
+  // 47%
+  (function c1() {
+    const s = Date.now(), d = 2000;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      $('hw1').textContent = Math.round(easeOut(p) * 47) + '%';
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+  // +340%
+  (function c2() {
+    const s = Date.now(), d = 2400;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      $('hw2').textContent = '+' + Math.round(easeOut(p) * 340) + '%';
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+  // $72,000
+  (function c3() {
+    const s = Date.now(), d = 2800;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      $('hw3').textContent = '$' + Math.round(easeOut(p) * 72000).toLocaleString();
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+}, 500);
+
+/* ── DONUT CHART ── */
+function animateDonut() {
+  const canvas = $('donutCanvas');
+  const ctx = canvas.getContext('2d');
+  const cx = 150, cy = 150, R = 124, r = 80;
+  const target = 0.47;
+  const dur = 2200;
+  const start = Date.now();
+
+  const draw = () => {
+    const p  = Math.min((Date.now() - start) / dur, 1);
+    const ep = easeOut(p);
+    ctx.clearRect(0, 0, 300, 300);
+
+    // background ring
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, 0, Math.PI*2);
+    ctx.arc(cx, cy, r, 0, Math.PI*2, true);
+    ctx.fillStyle = 'rgba(255,255,255,.04)';
+    ctx.fill();
+
+    // risk arc
+    const sa = -Math.PI / 2;
+    const ea = sa + Math.PI * 2 * target * ep;
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, sa, ea);
+    ctx.arc(cx, cy, r, ea, sa, true);
+    const g = ctx.createLinearGradient(cx-R, 0, cx+R, 0);
+    g.addColorStop(0, '#fcd34d');
+    g.addColorStop(1, '#f59e0b');
+    ctx.fillStyle = g;
+    ctx.shadowBlur = 70; ctx.shadowColor = '#f59e0b';
+    ctx.fill();
+    ctx.shadowBlur = 30; ctx.shadowColor = '#fcd34d';
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+    // safe arc
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, ea, sa + Math.PI*2);
+    ctx.arc(cx, cy, r, sa + Math.PI*2, ea, true);
+    ctx.fillStyle = 'rgba(34,211,238,.10)';
+    ctx.fill();
+
+    $('donutPct').textContent = Math.round(target * ep * 100) + '%';
+    if (p < 1) requestAnimationFrame(draw);
+  };
+  draw();
+}
+
+/* ── RISK BARS ── */
+const riskData = [
+  { label: '寿司・技術職人',   pct: 4,  color: '#22d3ee' },
+  { label: 'ITエンジニア',     pct: 18, color: '#3b82f6' },
+  { label: '営業・マーケ',     pct: 35, color: '#ffd93d' },
+  { label: '事務・管理職',     pct: 68, color: '#f97316' },
+  { label: 'データ入力・経理', pct: 89, color: '#ef4444' },
+];
+function buildRiskList() {
+  const el = $('riskList');
+  el.innerHTML = riskData.map(d =>
+    `<div class="risk-item">
+      <div class="risk-dot" style="background:${d.color}"></div>
+      <div class="risk-job">${d.label}</div>
+      <div class="risk-bar-bg"><div class="risk-bar-fill" data-w="${d.pct}" style="background:${d.color}"></div></div>
+      <div class="risk-pct" style="color:${d.color}">${d.pct}%</div>
+    </div>`
+  ).join('');
+  setTimeout(() => {
+    document.querySelectorAll('.risk-bar-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
+  }, 100);
+}
+
+/* ── GLOBAL STATS ── */
+function animateGstats() {
+  const items = [
+    { id: 'gs1', target: 340 },
+    { id: 'gs2', target: 12 },
+    { id: 'gs3', target: 45 },
+    { id: 'gs4', target: 18 },
+  ];
+  items.forEach((item, idx) => {
+    const el = document.getElementById(item.id);
+    if (!el) return;
+    // numglitch on start
+    setTimeout(() => {
+      el.classList.remove('numglitch'); void el.offsetWidth; el.classList.add('numglitch');
+    }, idx * 130);
+    const s = Date.now(), d = 2200;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      el.textContent = Math.round(easeOut(p) * item.target);
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  });
+}
+
+/* ── SALARY BARS ── */
+const salaryData = [
+  { country: '🇦🇺 オーストラリア',    amount: 'A$85,000〜',    pct: 100 },
+  { country: '🇺🇸 アメリカ（NYC）',   amount: 'US$80,000〜',   pct: 95  },
+  { country: '🇸🇬 シンガポール',      amount: 'S$72,000〜',    pct: 85  },
+  { country: '🇦🇪 UAE・ドバイ',       amount: 'AED 216,000〜', pct: 78  },
+  { country: '🇯🇵 東京（高級店）',    amount: '¥680万〜',      pct: 72  },
+  { country: '🇬🇧 イギリス',          amount: '£48,000〜',     pct: 62  },
+];
+function animateSalaryBars() {
+  const container = $('salaryBars');
+  if (!container) return;
+  container.innerHTML = salaryData.map(d =>
+    `<div class="sal-row">
+      <div class="sal-head">
+        <div class="sal-country">${d.country}</div>
+        <div class="sal-amount">${d.amount}</div>
+      </div>
+      <div class="sal-track"><div class="sal-fill" data-w="${d.pct}"></div></div>
+    </div>`
+  ).join('');
+  // Staggered bar entrance
+  document.querySelectorAll('.sal-fill').forEach((el, i) => {
+    setTimeout(() => { el.style.width = el.dataset.w + '%'; }, 150 + i * 220);
+  });
+  // 年収 peak counter
+  const peak = $('salPeak');
+  if (peak) {
+    const s = Date.now(), d = 2600;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      const v = Math.round(easeOut(p) * 2200);
+      peak.textContent = '¥' + v.toLocaleString() + '万円超';
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  }
+}
+
+/* ── WAGE LINE CHART ── */
+function drawWageChart() {
+  const canvas = $('wageCanvas');
+  if (!canvas) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.offsetWidth;
+  const H = 320;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.height = H + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const PAD = { top: 30, right: 44, bottom: 50, left: 66 };
+  const cW  = W - PAD.left - PAD.right;
+  const cH  = H - PAD.top  - PAD.bottom;
+
+  const years = [2019, 2020, 2021, 2022, 2023, 2024];
+  const white  = [100, 97,  99,  100, 101, 102];
+  const blue   = [100, 99,  102, 107, 114, 122];
+  const sushi  = [100, 98,  104, 114, 128, 148];
+  const minV = 88, maxV = 158;
+
+  const px = (i, v) => ({
+    x: PAD.left + (i / (years.length - 1)) * cW,
+    y: PAD.top  + (1 - (v - minV) / (maxV - minV)) * cH,
+  });
+
+  const drawGrid = () => {
+    ctx.strokeStyle = 'rgba(255,255,255,.06)'; ctx.lineWidth = 1;
+    for (let v = 90; v <= 150; v += 15) {
+      const y = PAD.top + (1 - (v - minV) / (maxV - minV)) * cH;
+      ctx.beginPath(); ctx.moveTo(PAD.left, y); ctx.lineTo(PAD.left + cW, y); ctx.stroke();
+      ctx.fillStyle = 'rgba(122,132,168,.75)';
+      ctx.font = '11px Inter, Noto Sans JP, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText(v, PAD.left - 8, y + 4);
+    }
+    years.forEach((yr, i) => {
+      const x = PAD.left + (i / (years.length - 1)) * cW;
+      ctx.fillStyle = 'rgba(122,132,168,.8)';
+      ctx.font = '11px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(yr, x, H - 8);
+    });
+    ctx.textAlign = 'left';
+  };
+
+  const drawArea = () => {
+    const pts = sushi.map((v, i) => px(i, v));
+    ctx.beginPath();
+    pts.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
+    ctx.lineTo(px(sushi.length - 1, minV).x, PAD.top + cH);
+    ctx.lineTo(PAD.left, PAD.top + cH);
+    const grad = ctx.createLinearGradient(0, PAD.top, 0, PAD.top + cH);
+    grad.addColorStop(0, 'rgba(34,211,238,.32)');
+    grad.addColorStop(0.5, 'rgba(34,211,238,.1)');
+    grad.addColorStop(1, 'rgba(34,211,238,0)');
+    ctx.fillStyle = grad; ctx.fill();
+  };
+
+  const datasets = [
+    { data: white, color: '#f59e0b', lw: 2 },
+    { data: blue,  color: '#3b82f6', lw: 2 },
+    { data: sushi, color: '#22d3ee', lw: 3 },
+  ];
+
+  const drawLine = (data, color, lineWidth, progress) => {
+    const pts = data.map((v, i) => px(i, v));
+    const total = pts.length - 1;
+    const cur   = progress * total;
+    const full  = Math.floor(cur);
+    const frac  = cur - full;
+    ctx.beginPath();
+    ctx.strokeStyle = color; ctx.lineWidth = lineWidth;
+    ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    for (let i = 0; i <= full && i < pts.length; i++) {
+      i === 0 ? ctx.moveTo(pts[0].x, pts[0].y) : ctx.lineTo(pts[i].x, pts[i].y);
+    }
+    if (full < pts.length - 1) {
+      const p1 = pts[full], p2 = pts[full + 1];
+      ctx.lineTo(p1.x + (p2.x - p1.x) * frac, p1.y + (p2.y - p1.y) * frac);
+    }
+    ctx.shadowBlur = color === '#22d3ee' ? 32 : 12;
+    ctx.shadowColor = color;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  };
+
+  const dur = 2400, startT = Date.now();
+  const tick = () => {
+    ctx.clearRect(0, 0, W, H);
+    drawGrid();
+    drawArea();
+    const p = easeOut(Math.min((Date.now() - startT) / dur, 1));
+    datasets.forEach(d => drawLine(d.data, d.color, d.lw, p));
+
+    // Glowing comet head during animation
+    if (p < 1) {
+      datasets.forEach(d => {
+        const pts = d.data.map((v, i) => px(i, v));
+        const total = pts.length - 1;
+        const cur = p * total;
+        const full = Math.floor(cur);
+        const frac = cur - full;
+        let hx, hy;
+        if (full < pts.length - 1) {
+          hx = pts[full].x + (pts[full+1].x - pts[full].x) * frac;
+          hy = pts[full].y + (pts[full+1].y - pts[full].y) * frac;
+        } else { hx = pts[pts.length-1].x; hy = pts[pts.length-1].y; }
+        const r = d.color === '#22d3ee' ? 6 : 4;
+        ctx.beginPath(); ctx.arc(hx, hy, r, 0, Math.PI*2);
+        ctx.fillStyle = d.color;
+        ctx.shadowBlur = d.color === '#22d3ee' ? 30 : 18;
+        ctx.shadowColor = d.color;
+        ctx.fill(); ctx.shadowBlur = 0;
+      });
+    }
+
+    if (p >= 1) {
+      datasets.forEach(d => {
+        const last = px(d.data.length - 1, d.data[d.data.length - 1]);
+        // Outer glow ring
+        ctx.beginPath(); ctx.arc(last.x, last.y, 10, 0, Math.PI * 2);
+        ctx.fillStyle = d.color.replace(')', ', .2)').replace('rgb', 'rgba');
+        ctx.shadowBlur = 24; ctx.shadowColor = d.color;
+        ctx.fill(); ctx.shadowBlur = 0;
+        // Inner dot
+        ctx.beginPath(); ctx.arc(last.x, last.y, 6, 0, Math.PI * 2);
+        ctx.fillStyle = d.color;
+        ctx.shadowBlur = 16; ctx.shadowColor = d.color;
+        ctx.fill(); ctx.shadowBlur = 0;
+        ctx.strokeStyle = '#070c18'; ctx.lineWidth = 2.5; ctx.stroke();
+
+        const labels = {
+          '#f59e0b': 'ホワイトカラー +2%',
+          '#3b82f6': '職人・ブルーカラー +22%',
+          '#22d3ee': '寿司職人 +48%',
+        };
+        ctx.fillStyle = d.color;
+        ctx.font = 'bold 11px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        const off = d.color === '#f59e0b' ? 18 : d.color === '#3b82f6' ? -10 : -20;
+        ctx.fillText(labels[d.color], last.x - 10, last.y + off);
+      });
+      ctx.textAlign = 'left';
+
+      // reference line
+      const y100 = PAD.top + (1 - (100 - minV) / (maxV - minV)) * cH;
+      ctx.setLineDash([4, 4]);
+      ctx.strokeStyle = 'rgba(255,255,255,.18)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(PAD.left, y100); ctx.lineTo(PAD.left + cW, y100); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = 'rgba(255,255,255,.35)';
+      ctx.font = '10px Inter, sans-serif';
+      ctx.fillText('基準 (2019年=100)', PAD.left + 6, y100 - 5);
+    }
+
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+/* ── FLASH STRIP ── */
+function animateFlash() {
+  (function() {
+    const el = $('fl1'); if (!el) return;
+    const wrap = el.closest('.flash-num');
+    if (wrap) { wrap.classList.remove('numglitch'); void wrap.offsetWidth; wrap.classList.add('numglitch'); }
+    const s = Date.now(), d = 1600;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      el.textContent = Math.round(easeOut(p) * 4);
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+  (function() {
+    const el = $('fl2'); if (!el) return;
+    setTimeout(() => {
+      const wrap = el.closest('.flash-num');
+      if (wrap) { wrap.classList.remove('numglitch'); void wrap.offsetWidth; wrap.classList.add('numglitch'); }
+    }, 200);
+    const s = Date.now(), d = 2000;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      el.textContent = Math.round(easeOut(p) * 12);
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+  (function() {
+    const el = $('fl3'); if (!el) return;
+    setTimeout(() => {
+      const wrap = el.closest('.flash-num');
+      if (wrap) { wrap.classList.remove('numglitch'); void wrap.offsetWidth; wrap.classList.add('numglitch'); }
+    }, 400);
+    const s = Date.now(), d = 2400;
+    (function t() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      el.textContent = '$' + Math.round(easeOut(p) * 150000).toLocaleString();
+      if (p < 1) requestAnimationFrame(t);
+    })();
+  })();
+}
+
+/* ── RISK COMPARISON CHART ── */
+function rr(ctx, x, y, w, h, r) {
+  if (w <= 0) return;
+  r = Math.min(r, w/2, h/2);
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+function drawRiskCompChart() {
+  const canvas = $('riskCompCanvas');
+  if (!canvas) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.offsetWidth;
+  const H = 220;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.height = H + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const cats = [
+    { label: '事務・経理', risk: 89, color: '#f87171', glow: 'rgba(248,113,113,.6)' },
+    { label: '営業・IT一般', risk: 45, color: '#ffd93d', glow: 'rgba(255,217,61,.6)' },
+    { label: '寿司職人', risk: 4,  color: '#22d3ee', glow: 'rgba(34,211,238,.6)' },
+  ];
+  const PAD = { top: 24, right: 80, bottom: 24, left: 130 };
+  const barH = 38, gap = 26;
+  const barW = W - PAD.left - PAD.right;
+  const dur = 2000, startT = Date.now();
+
+  const draw = () => {
+    ctx.clearRect(0, 0, W, H);
+    const p = easeOut(Math.min((Date.now() - startT) / dur, 1));
+    cats.forEach((cat, i) => {
+      const y = PAD.top + i * (barH + gap);
+      const fillW = barW * (cat.risk / 100) * p;
+
+      // Track
+      rr(ctx, PAD.left, y, barW, barH, 8);
+      ctx.fillStyle = 'rgba(255,255,255,.04)'; ctx.fill();
+
+      // Fill
+      if (fillW > 2) {
+        const g = ctx.createLinearGradient(PAD.left, 0, PAD.left + fillW, 0);
+        g.addColorStop(0, cat.color + '55'); g.addColorStop(1, cat.color);
+        rr(ctx, PAD.left, y, fillW, barH, 8);
+        ctx.fillStyle = g;
+        ctx.shadowBlur = 22; ctx.shadowColor = cat.glow;
+        ctx.fill(); ctx.shadowBlur = 0;
+      }
+
+      // Label
+      ctx.fillStyle = 'rgba(192,204,232,.85)';
+      ctx.font = `600 13px "Noto Sans JP", sans-serif`;
+      ctx.textAlign = 'right';
+      ctx.fillText(cat.label, PAD.left - 12, y + barH / 2 + 5);
+
+      // Percentage
+      const pct = Math.round(cat.risk * p);
+      ctx.fillStyle = cat.color;
+      ctx.font = `bold 15px "Inter", sans-serif`;
+      ctx.textAlign = 'left';
+      ctx.shadowBlur = 14; ctx.shadowColor = cat.glow;
+      ctx.fillText(pct + '%', PAD.left + barW + 10, y + barH / 2 + 6);
+      ctx.shadowBlur = 0;
+    });
+    if (p < 1) requestAnimationFrame(draw);
+  };
+  draw();
+}
+function animateRiskComp() {
+  drawRiskCompChart();
+  const items = [{ id:'cr1', t:89 }, { id:'cr2', t:45 }, { id:'cr3', t:4 }];
+  items.forEach(item => {
+    const el = $(item.id); if (!el) return;
+    const s = Date.now(), d = 2000;
+    (function tick() {
+      const p = Math.min((Date.now()-s)/d, 1);
+      el.textContent = Math.round(easeOut(p) * item.t) + '%';
+      if (p < 1) requestAnimationFrame(tick);
+    })();
+  });
+}
+
+/* ── RESIZE ── */
+let rt;
+window.addEventListener('resize', () => {
+  clearTimeout(rt);
+  rt = setTimeout(() => {
+    if (secActive.has('s-wage'))    drawWageChart();
+    if (secActive.has('s-compare')) drawRiskCompChart();
+  }, 300);
+});
+</script>
+</body>
+</html>
